@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Specify the directory containing the .c files
-directory="../code"
+directory="."
 
 # Loop through all .c files in the directory
 for file in "$directory"/*.c; do
