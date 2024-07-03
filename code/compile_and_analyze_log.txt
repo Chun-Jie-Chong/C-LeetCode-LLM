@@ -1,23 +1,498 @@
+Analyzing and compiling 100_response.c to 100_response.o
+Compilation and analysis of 100_response.c succeeded
+Analyzing and compiling 1035_response.c to 1035_response.o
+Compilation and analysis of 1035_response.c succeeded
+Analyzing and compiling 1046_response.c to 1046_response.o
+Compilation and analysis of 1046_response.c succeeded
+Analyzing and compiling 104_response.c to 104_response.o
+Compilation and analysis of 104_response.c succeeded
+Analyzing and compiling 108_response.c to 108_response.o
+Compilation and analysis of 108_response.c succeeded
+Analyzing and compiling 10_response.c to 10_response.o
+Compilation and analysis of 10_response.c succeeded
+Analyzing and compiling 110_response.c to 110_response.o
+Compilation and analysis of 110_response.c succeeded
+Analyzing and compiling 112_response.c to 112_response.o
+Compilation and analysis of 112_response.c succeeded
+Analyzing and compiling 1137_response.c to 1137_response.o
+1137_response.c:14:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+    return tn;
+    ^~~~~~~~~
+1 warning generated.
+Compilation and analysis of 1137_response.c succeeded
+Analyzing and compiling 1143_response.c to 1143_response.o
+Compilation and analysis of 1143_response.c succeeded
+Analyzing and compiling 115_response.c to 115_response.o
+Compilation and analysis of 115_response.c succeeded
+Analyzing and compiling 1189_response.c to 1189_response.o
+Compilation and analysis of 1189_response.c succeeded
+Analyzing and compiling 118_response.c to 118_response.o
+Compilation and analysis of 118_response.c succeeded
+Analyzing and compiling 120_response.c to 120_response.o
+Compilation and analysis of 120_response.c succeeded
+Analyzing and compiling 122_response.c to 122_response.o
+Compilation and analysis of 122_response.c succeeded
+Analyzing and compiling 124_response.c to 124_response.o
+Compilation and analysis of 124_response.c succeeded
+Analyzing and compiling 125_response.c to 125_response.o
+Compilation and analysis of 125_response.c succeeded
+Analyzing and compiling 1288_response.c to 1288_response.o
+Compilation and analysis of 1288_response.c succeeded
+Analyzing and compiling 1299_response.c to 1299_response.o
+Compilation and analysis of 1299_response.c succeeded
+Analyzing and compiling 129_response.c to 129_response.o
+Compilation and analysis of 129_response.c succeeded
 Analyzing and compiling 130_response.c to 130_response.o
 Compilation and analysis of 130_response.c succeeded
+Analyzing and compiling 133_response.c to 133_response.o
+Compilation and analysis of 133_response.c succeeded
+Analyzing and compiling 134_response.c to 134_response.o
+Compilation and analysis of 134_response.c succeeded
+Analyzing and compiling 135_response.c to 135_response.o
+135_response.c:33:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+    return dummy.next;
+    ^~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 135_response.c succeeded
+Analyzing and compiling 136_response.c to 136_response.o
+Compilation and analysis of 136_response.c succeeded
+Analyzing and compiling 138_response.c to 138_response.o
+Compilation and analysis of 138_response.c succeeded
+Analyzing and compiling 1406_response.c to 1406_response.o
+Compilation and analysis of 1406_response.c succeeded
+Analyzing and compiling 141_response.c to 141_response.o
+Compilation and analysis of 141_response.c succeeded
+Analyzing and compiling 142_response.c to 142_response.o
+Compilation and analysis of 142_response.c succeeded
+Analyzing and compiling 143_response.c to 143_response.o
+Compilation and analysis of 143_response.c succeeded
+Analyzing and compiling 1448_response.c to 1448_response.o
+Compilation and analysis of 1448_response.c succeeded
+Analyzing and compiling 1470_response.c to 1470_response.o
+Compilation and analysis of 1470_response.c succeeded
+Analyzing and compiling 1480_response.c to 1480_response.o
+Compilation and analysis of 1480_response.c succeeded
+Analyzing and compiling 148_response.c to 148_response.o
+Compilation and analysis of 148_response.c succeeded
+Analyzing and compiling 14_response.c to 14_response.o
+Compilation and analysis of 14_response.c succeeded
+Analyzing and compiling 150_response.c to 150_response.o
+150_response.c:14:13: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+            int b = stack[top--];
+            ^~~~~   ~~~~~~~~~~~~
+150_response.c:15:13: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+            int a = stack[top--];
+            ^~~~~   ~~~~~~~~~~~~
+150_response.c:25:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+    return stack[top];
+    ^~~~~~~~~~~~~~~~~
+3 warnings generated.
+Compilation and analysis of 150_response.c succeeded
+Analyzing and compiling 152_response.c to 152_response.o
+Compilation and analysis of 152_response.c succeeded
+Analyzing and compiling 153_response.c to 153_response.o
+Compilation and analysis of 153_response.c succeeded
+Analyzing and compiling 155_response.c to 155_response.o
+Compilation and analysis of 155_response.c succeeded
+Analyzing and compiling 15_response.c to 15_response.o
+Compilation and analysis of 15_response.c succeeded
+Analyzing and compiling 160_response.c to 160_response.o
+Compilation and analysis of 160_response.c succeeded
+Analyzing and compiling 1626_response.c to 1626_response.o
+Compilation and analysis of 1626_response.c succeeded
+Analyzing and compiling 167_response.c to 167_response.o
+167_response.c:24:12: warning: Potential leak of memory pointed to by 'result' [unix.Malloc]
+    return NULL; // Because the problem guarantees one solution, this line is actually never reached
+           ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h:89:24: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+                       ^
+1 warning generated.
+Compilation and analysis of 167_response.c succeeded
+Analyzing and compiling 169_response.c to 169_response.o
+Compilation and analysis of 169_response.c succeeded
+Analyzing and compiling 1799_response.c to 1799_response.o
+1799_response.c:35:31: warning: 1st function call argument is an uninitialized value [core.CallAndMessage]
+                dp[newMask] = fmax(dp[newMask], dp[mask] + step * gcd(nums[i], nums[j]));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 1799_response.c succeeded
+Analyzing and compiling 179_response.c to 179_response.o
+Compilation and analysis of 179_response.c succeeded
+Analyzing and compiling 1838_response.c to 1838_response.o
+Compilation and analysis of 1838_response.c succeeded
+Analyzing and compiling 1856_response.c to 1856_response.o
+Compilation and analysis of 1856_response.c succeeded
+Analyzing and compiling 1899_response.c to 1899_response.o
+Compilation and analysis of 1899_response.c succeeded
+Analyzing and compiling 1905_response.c to 1905_response.o
+Compilation and analysis of 1905_response.c succeeded
+Analyzing and compiling 190_response.c to 190_response.o
+Compilation and analysis of 190_response.c succeeded
+Analyzing and compiling 191_response.c to 191_response.o
+Compilation and analysis of 191_response.c succeeded
+Analyzing and compiling 1929_response.c to 1929_response.o
+Compilation and analysis of 1929_response.c succeeded
+Analyzing and compiling 1930_response.c to 1930_response.o
+Compilation and analysis of 1930_response.c succeeded
+Analyzing and compiling 1963_response.c to 1963_response.o
+Compilation and analysis of 1963_response.c succeeded
+Analyzing and compiling 1964_response.c to 1964_response.o
+Compilation and analysis of 1964_response.c succeeded
+Analyzing and compiling 1968_response.c to 1968_response.o
+Compilation and analysis of 1968_response.c succeeded
+Analyzing and compiling 198_response.c to 198_response.o
+Compilation and analysis of 198_response.c succeeded
+Analyzing and compiling 199_response.c to 199_response.o
+Compilation and analysis of 199_response.c succeeded
+Analyzing and compiling 19_response.c to 19_response.o
+19_response.c:15:16: warning: Access to field 'next' results in a dereference of a null pointer (loaded from variable 'head') [core.NullDereference]
+        head = head->next;
+               ^~~~~~~~~~
+19_response.c:24:18: warning: Access to field 'next' results in a dereference of a null pointer (loaded from field 'next') [core.NullDereference]
+    slow->next = slow->next->next;
+                 ^~~~~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 19_response.c succeeded
+Analyzing and compiling 2002_response.c to 2002_response.o
+Compilation and analysis of 2002_response.c succeeded
+Analyzing and compiling 200_response.c to 200_response.o
+Compilation and analysis of 200_response.c succeeded
+Analyzing and compiling 202_response.c to 202_response.o
+Compilation and analysis of 202_response.c succeeded
+Analyzing and compiling 205_response.c to 205_response.o
+Compilation and analysis of 205_response.c succeeded
+Analyzing and compiling 206_response.c to 206_response.o
+Compilation and analysis of 206_response.c succeeded
+Analyzing and compiling 207_response.c to 207_response.o
+207_response.c:33:13: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+            int nextCourse = graph[course][i];
+            ^~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 207_response.c succeeded
+Analyzing and compiling 208_response.c to 208_response.o
+Compilation and analysis of 208_response.c succeeded
+Analyzing and compiling 209_response.c to 209_response.o
+Compilation and analysis of 209_response.c succeeded
+Analyzing and compiling 212_response.c to 212_response.o
+212_response.c:93:18: warning: Potential leak of memory pointed to by 'trie' [unix.Malloc]
+    for (int i = 0; i < boardSize; i++) {
+                 ^
+1 warning generated.
+Compilation and analysis of 212_response.c succeeded
+Analyzing and compiling 213_response.c to 213_response.o
+Compilation and analysis of 213_response.c succeeded
+Analyzing and compiling 2140_response.c to 2140_response.o
+Compilation and analysis of 2140_response.c succeeded
+Analyzing and compiling 215_response.c to 215_response.o
+Compilation and analysis of 215_response.c succeeded
+Analyzing and compiling 21_response.c to 21_response.o
+Compilation and analysis of 21_response.c succeeded
+Analyzing and compiling 226_response.c to 226_response.o
+Compilation and analysis of 226_response.c succeeded
+Analyzing and compiling 22_response.c to 22_response.o
+Compilation and analysis of 22_response.c succeeded
+Analyzing and compiling 230_response.c to 230_response.o
+Compilation and analysis of 230_response.c succeeded
+Analyzing and compiling 234_response.c to 234_response.o
+Compilation and analysis of 234_response.c succeeded
+Analyzing and compiling 235_response.c to 235_response.o
+Compilation and analysis of 235_response.c succeeded
+Analyzing and compiling 238_response.c to 238_response.o
+Compilation and analysis of 238_response.c succeeded
+Analyzing and compiling 239_response.c to 239_response.o
+Compilation and analysis of 239_response.c succeeded
+Analyzing and compiling 23_response.c to 23_response.o
+Compilation and analysis of 23_response.c succeeded
+Analyzing and compiling 242_response.c to 242_response.o
+Compilation and analysis of 242_response.c succeeded
 Analyzing and compiling 2466_response.c to 2466_response.o
 Compilation and analysis of 2466_response.c succeeded
+Analyzing and compiling 24_response.c to 24_response.o
+Compilation and analysis of 24_response.c succeeded
+Analyzing and compiling 25_response.c to 25_response.o
+Compilation and analysis of 25_response.c succeeded
+Analyzing and compiling 263_response.c to 263_response.o
+Compilation and analysis of 263_response.c succeeded
+Analyzing and compiling 268_response.c to 268_response.o
+Compilation and analysis of 268_response.c succeeded
+Analyzing and compiling 26_response.c to 26_response.o
+Compilation and analysis of 26_response.c succeeded
+Analyzing and compiling 279_response.c to 279_response.o
+Compilation and analysis of 279_response.c succeeded
+Analyzing and compiling 27_response.c to 27_response.o
+Compilation and analysis of 27_response.c succeeded
 Analyzing and compiling 283_response.c to 283_response.o
 Compilation and analysis of 283_response.c succeeded
+Analyzing and compiling 287_response.c to 287_response.o
+Compilation and analysis of 287_response.c succeeded
+Analyzing and compiling 28_response.c to 28_response.o
+Compilation and analysis of 28_response.c succeeded
+Analyzing and compiling 297_response.c to 297_response.o
+297_response.c:82:37: warning: 1st function call argument is an uninitialized value [core.CallAndMessage]
+    struct TreeNode* root = newNode(atoi(tokens[0]));
+                                    ^~~~~~~~~~~~~~~
+297_response.c:88:9: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+        struct TreeNode* parent = queue[front++];
+        ^~~~~~~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 297_response.c succeeded
+Analyzing and compiling 2_response.c to 2_response.o
+2_response.c:35:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+    return dummy.next;
+    ^~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 2_response.c succeeded
+Analyzing and compiling 300_response.c to 300_response.o
+Compilation and analysis of 300_response.c succeeded
+Analyzing and compiling 309_response.c to 309_response.o
+Compilation and analysis of 309_response.c succeeded
+Analyzing and compiling 312_response.c to 312_response.o
+Compilation and analysis of 312_response.c succeeded
+Analyzing and compiling 322_response.c to 322_response.o
+Compilation and analysis of 322_response.c succeeded
+Analyzing and compiling 329_response.c to 329_response.o
+Compilation and analysis of 329_response.c succeeded
+Analyzing and compiling 332_response.c to 332_response.o
+Compilation and analysis of 332_response.c succeeded
+Analyzing and compiling 33_response.c to 33_response.o
+Compilation and analysis of 33_response.c succeeded
+Analyzing and compiling 343_response.c to 343_response.o
+Compilation and analysis of 343_response.c succeeded
+Analyzing and compiling 344_response.c to 344_response.o
+Compilation and analysis of 344_response.c succeeded
+Analyzing and compiling 347_response.c to 347_response.o
+Compilation and analysis of 347_response.c succeeded
 Analyzing and compiling 36_response.c to 36_response.o
 Compilation and analysis of 36_response.c succeeded
+Analyzing and compiling 371_response.c to 371_response.o
+Compilation and analysis of 371_response.c succeeded
+Analyzing and compiling 377_response.c to 377_response.o
+Compilation and analysis of 377_response.c succeeded
 Analyzing and compiling 392_response.c to 392_response.o
 Compilation and analysis of 392_response.c succeeded
+Analyzing and compiling 39_response.c to 39_response.o
+Compilation and analysis of 39_response.c succeeded
 Analyzing and compiling 409_response.c to 409_response.o
 Compilation and analysis of 409_response.c succeeded
+Analyzing and compiling 40_response.c to 40_response.o
+40_response.c:38:5: warning: Potential leak of memory pointed to by 'columnSizes' [unix.Malloc]
+    return results;
+    ^~~~~~~~~~~~~~
+40_response.c:38:5: warning: Potential leak of memory pointed to by 'current' [unix.Malloc]
+    return results;
+    ^~~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 40_response.c succeeded
+Analyzing and compiling 416_response.c to 416_response.o
+Compilation and analysis of 416_response.c succeeded
+Analyzing and compiling 417_response.c to 417_response.o
+417_response.c:63:23: warning: Array access results in an undefined pointer dereference [core.NullDereference]
+    visited[row][col] = true;
+    ~~~~~~~~~~~~~~~~~~^~~~~~
+1 warning generated.
+Compilation and analysis of 417_response.c succeeded
+Analyzing and compiling 41_response.c to 41_response.o
+Compilation and analysis of 41_response.c succeeded
+Analyzing and compiling 424_response.c to 424_response.o
+Compilation and analysis of 424_response.c succeeded
+Analyzing and compiling 435_response.c to 435_response.o
+Compilation and analysis of 435_response.c succeeded
+Analyzing and compiling 438_response.c to 438_response.o
+Compilation and analysis of 438_response.c succeeded
+Analyzing and compiling 43_response.c to 43_response.o
+43_response.c:27:38: warning: Potential leak of memory pointed to by 'result' [unix.Malloc]
+    if (index == len1 + len2) return "0";
+                                     ^~~
+43_response.c:27:38: warning: Potential leak of memory pointed to by 'finalResult' [unix.Malloc]
+    if (index == len1 + len2) return "0";
+                                     ^~~
+2 warnings generated.
+Compilation and analysis of 43_response.c succeeded
+Analyzing and compiling 448_response.c to 448_response.o
+Compilation and analysis of 448_response.c succeeded
+Analyzing and compiling 45_response.c to 45_response.o
+Compilation and analysis of 45_response.c succeeded
+Analyzing and compiling 463_response.c to 463_response.o
+Compilation and analysis of 463_response.c succeeded
+Analyzing and compiling 46_response.c to 46_response.o
+Compilation and analysis of 46_response.c succeeded
+Analyzing and compiling 48_response.c to 48_response.o
+Compilation and analysis of 48_response.c succeeded
+Analyzing and compiling 494_response.c to 494_response.o
+Compilation and analysis of 494_response.c succeeded
+Analyzing and compiling 4_response.c to 4_response.o
+Compilation and analysis of 4_response.c succeeded
 Analyzing and compiling 518_response.c to 518_response.o
 Compilation and analysis of 518_response.c succeeded
+Analyzing and compiling 51_response.c to 51_response.o
+51_response.c:12:29: error: function definition is not allowed here
+    void backtrack(int row) {
+                            ^
+51_response.c:40:5: error: call to undeclared function 'backtrack'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    backtrack(0);
+    ^
+2 errors generated.
+Compilation and analysis of 51_response.c failed
 Analyzing and compiling 523_response.c to 523_response.o
 Compilation and analysis of 523_response.c succeeded
+Analyzing and compiling 52_response.c to 52_response.o
+Compilation and analysis of 52_response.c succeeded
+Analyzing and compiling 53_response.c to 53_response.o
+Compilation and analysis of 53_response.c succeeded
+Analyzing and compiling 543_response.c to 543_response.o
+Compilation and analysis of 543_response.c succeeded
+Analyzing and compiling 54_response.c to 54_response.o
+Compilation and analysis of 54_response.c succeeded
+Analyzing and compiling 55_response.c to 55_response.o
+Compilation and analysis of 55_response.c succeeded
+Analyzing and compiling 567_response.c to 567_response.o
+Compilation and analysis of 567_response.c succeeded
+Analyzing and compiling 56_response.c to 56_response.o
+Compilation and analysis of 56_response.c succeeded
+Analyzing and compiling 572_response.c to 572_response.o
+Compilation and analysis of 572_response.c succeeded
+Analyzing and compiling 57_response.c to 57_response.o
+Compilation and analysis of 57_response.c succeeded
+Analyzing and compiling 589_response.c to 589_response.o
+Compilation and analysis of 589_response.c succeeded
+Analyzing and compiling 58_response.c to 58_response.o
+Compilation and analysis of 58_response.c succeeded
+Analyzing and compiling 5_response.c to 5_response.o
+Compilation and analysis of 5_response.c succeeded
+Analyzing and compiling 605_response.c to 605_response.o
+Compilation and analysis of 605_response.c succeeded
+Analyzing and compiling 617_response.c to 617_response.o
+Compilation and analysis of 617_response.c succeeded
+Analyzing and compiling 621_response.c to 621_response.o
+Compilation and analysis of 621_response.c succeeded
+Analyzing and compiling 62_response.c to 62_response.o
+Compilation and analysis of 62_response.c succeeded
+Analyzing and compiling 647_response.c to 647_response.o
+Compilation and analysis of 647_response.c succeeded
+Analyzing and compiling 66_response.c to 66_response.o
+Compilation and analysis of 66_response.c succeeded
+Analyzing and compiling 673_response.c to 673_response.o
+Compilation and analysis of 673_response.c succeeded
+Analyzing and compiling 678_response.c to 678_response.o
+Compilation and analysis of 678_response.c succeeded
+Analyzing and compiling 67_response.c to 67_response.o
+Compilation and analysis of 67_response.c succeeded
+Analyzing and compiling 680_response.c to 680_response.o
+Compilation and analysis of 680_response.c succeeded
+Analyzing and compiling 682_response.c to 682_response.o
+682_response.c:11:17: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+            sum -= stack[top--];
+                ^  ~~~~~~~~~~~~
+682_response.c:13:30: warning: The right operand of '*' is a garbage value due to array index out of bounds [core.UndefinedBinaryOperatorResult]
+            stack[++top] = 2 * stack[top];
+                             ^ ~~~~~~~~~~
+682_response.c:16:39: warning: The left operand of '+' is a garbage value due to array index out of bounds [core.UndefinedBinaryOperatorResult]
+            stack[++top] = stack[top] + stack[top - 1];
+                           ~~~~~~~~~~ ^
+682_response.c:16:39: warning: The right operand of '+' is a garbage value due to array index out of bounds [core.UndefinedBinaryOperatorResult]
+            stack[++top] = stack[top] + stack[top - 1];
+                                      ^ ~~~~~~~~~~~~~~
+4 warnings generated.
+Compilation and analysis of 682_response.c succeeded
+Analyzing and compiling 684_response.c to 684_response.o
+Compilation and analysis of 684_response.c succeeded
+Analyzing and compiling 691_response.c to 691_response.o
+Compilation and analysis of 691_response.c succeeded
+Analyzing and compiling 695_response.c to 695_response.o
+Compilation and analysis of 695_response.c succeeded
+Analyzing and compiling 69_response.c to 69_response.o
+69_response.c:19:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+    return result;
+    ^~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 69_response.c succeeded
+Analyzing and compiling 704_response.c to 704_response.o
+Compilation and analysis of 704_response.c succeeded
+Analyzing and compiling 707_response.c to 707_response.o
+Compilation and analysis of 707_response.c succeeded
+Analyzing and compiling 70_response.c to 70_response.o
+Compilation and analysis of 70_response.c succeeded
+Analyzing and compiling 724_response.c to 724_response.o
+Compilation and analysis of 724_response.c succeeded
+Analyzing and compiling 72_response.c to 72_response.o
+Compilation and analysis of 72_response.c succeeded
+Analyzing and compiling 739_response.c to 739_response.o
+Compilation and analysis of 739_response.c succeeded
+Analyzing and compiling 73_response.c to 73_response.o
+Compilation and analysis of 73_response.c succeeded
+Analyzing and compiling 740_response.c to 740_response.o
+Compilation and analysis of 740_response.c succeeded
+Analyzing and compiling 746_response.c to 746_response.o
+Compilation and analysis of 746_response.c succeeded
+Analyzing and compiling 74_response.c to 74_response.o
+Compilation and analysis of 74_response.c succeeded
+Analyzing and compiling 75_response.c to 75_response.o
+Compilation and analysis of 75_response.c succeeded
+Analyzing and compiling 763_response.c to 763_response.o
+Compilation and analysis of 763_response.c succeeded
+Analyzing and compiling 76_response.c to 76_response.o
+Compilation and analysis of 76_response.c succeeded
+Analyzing and compiling 78_response.c to 78_response.o
+Compilation and analysis of 78_response.c succeeded
+Analyzing and compiling 79_response.c to 79_response.o
+Compilation and analysis of 79_response.c succeeded
+Analyzing and compiling 7_response.c to 7_response.o
+Compilation and analysis of 7_response.c succeeded
 Analyzing and compiling 837_response.c to 837_response.o
 Compilation and analysis of 837_response.c succeeded
 Analyzing and compiling 83_response.c to 83_response.o
 Compilation and analysis of 83_response.c succeeded
+Analyzing and compiling 846_response.c to 846_response.o
+Compilation and analysis of 846_response.c succeeded
+Analyzing and compiling 84_response.c to 84_response.o
+Compilation and analysis of 84_response.c succeeded
+Analyzing and compiling 853_response.c to 853_response.o
+853_response.c:32:28: warning: The left operand of '>' is a garbage value [core.UndefinedBinaryOperatorResult]
+        if (arrivalTime[i] > lastTime) {
+            ~~~~~~~~~~~~~~ ^
+1 warning generated.
+Compilation and analysis of 853_response.c succeeded
+Analyzing and compiling 875_response.c to 875_response.o
+Compilation and analysis of 875_response.c succeeded
+Analyzing and compiling 876_response.c to 876_response.o
+Compilation and analysis of 876_response.c succeeded
+Analyzing and compiling 881_response.c to 881_response.o
+Compilation and analysis of 881_response.c succeeded
+Analyzing and compiling 88_response.c to 88_response.o
+Compilation and analysis of 88_response.c succeeded
+Analyzing and compiling 90_response.c to 90_response.o
+Compilation and analysis of 90_response.c succeeded
+Analyzing and compiling 912_response.c to 912_response.o
+Compilation and analysis of 912_response.c succeeded
+Analyzing and compiling 91_response.c to 91_response.o
+Compilation and analysis of 91_response.c succeeded
+Analyzing and compiling 94_response.c to 94_response.o
+Compilation and analysis of 94_response.c succeeded
+Analyzing and compiling 953_response.c to 953_response.o
+Compilation and analysis of 953_response.c succeeded
+Analyzing and compiling 96_response.c to 96_response.o
+Compilation and analysis of 96_response.c succeeded
+Analyzing and compiling 973_response.c to 973_response.o
+Compilation and analysis of 973_response.c succeeded
+Analyzing and compiling 97_response.c to 97_response.o
+Compilation and analysis of 97_response.c succeeded
+Analyzing and compiling 980_response.c to 980_response.o
+980_response.c:31:5: warning: 4th function call argument is an uninitialized value [core.CallAndMessage]
+    dfs(grid, gridSize, gridColSize, startX, startY, zeroCount, &pathCount);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 980_response.c succeeded
+Analyzing and compiling 981_response.c to 981_response.o
+Compilation and analysis of 981_response.c succeeded
+Analyzing and compiling 983_response.c to 983_response.o
+Compilation and analysis of 983_response.c succeeded
 Analyzing and compiling 989_response.c to 989_response.o
 Compilation and analysis of 989_response.c succeeded
+Analyzing and compiling 98_response.c to 98_response.o
+Compilation and analysis of 98_response.c succeeded
+Analyzing and compiling 994_response.c to 994_response.o
+Compilation and analysis of 994_response.c succeeded
+Analyzing and compiling 9_response.c to 9_response.o
+Compilation and analysis of 9_response.c succeeded
 Compilation and static analysis completed.
