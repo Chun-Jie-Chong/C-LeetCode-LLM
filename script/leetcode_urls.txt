@@ -149,7 +149,6 @@ https://leetcode.com/problems/intersection-of-two-linked-lists/description/
 https://leetcode.com/problems/perfect-squares/description/
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 https://leetcode.com/problems/hand-of-straights/description/
-https://leetcode.com/problems/length-of-the-last-word/description/
 https://leetcode.com/problems/sort-list/description/
 https://leetcode.com/problems/longest-increasing-subsequence/description/
 https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
