@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define MOD 1000000007
 
-long long maxMinProduct(int* nums, int numsSize) {
+long long maxSumMinProduct(int* nums, int numsSize) {
     int* left = (int*)malloc(numsSize * sizeof(int));
     int* right = (int*)malloc(numsSize * sizeof(int));
     long long* prefix = (long long*)malloc((numsSize + 1) * sizeof(long long));

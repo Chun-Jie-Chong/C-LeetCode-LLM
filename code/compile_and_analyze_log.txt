@@ -53,10 +53,6 @@ Compilation and analysis of 133_response.c succeeded
 Analyzing and compiling 134_response.c to 134_response.o
 Compilation and analysis of 134_response.c succeeded
 Analyzing and compiling 135_response.c to 135_response.o
-135_response.c:33:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
-    return dummy.next;
-    ^~~~~~~~~~~~~~~~~
-1 warning generated.
 Compilation and analysis of 135_response.c succeeded
 Analyzing and compiling 136_response.c to 136_response.o
 Compilation and analysis of 136_response.c succeeded

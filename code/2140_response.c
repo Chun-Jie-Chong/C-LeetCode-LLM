@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-long long maxPoints(int **questions, int questionsSize, int *questionsColSize){
+long long mostPoints(int **questions, int questionsSize, int *questionsColSize){
     long long dp[100000 + 5];
     memset(dp, 0, sizeof(dp));
     

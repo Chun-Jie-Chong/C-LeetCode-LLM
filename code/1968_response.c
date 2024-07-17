@@ -1,19 +1,29 @@
+#include <stdio.h>
 #include <stdlib.h>
 
-int comp(const void *a, const void *b) {
+int cmp(const void* a, const void* b) {
     return (*(int*)a - *(int*)b);
 }
 
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+int* rearrangeArray(int* nums, int numsSize, int* returnSize) {
+    // Sort the array
+    qsort(nums, numsSize, sizeof(int), cmp);
 
-void rearrangeArray(int* nums, int numsSize) {
-    qsort(nums, numsSize, sizeof(int), comp);
+    // Allocate memory for the result array
+    int* result = (int*)malloc(numsSize * sizeof(int));
     
-    for (int i = 1; i < numsSize - 1; i += 2) {
-        swap(&nums[i], &nums[i + 1]);
+    // Use two pointers to fill the result array in a zigzag manner
+    int left = 0, right = (numsSize + 1) / 2, index = 0;
+    while (left < (numsSize + 1) / 2 || right < numsSize) {
+        if (left < (numsSize + 1) / 2) {
+            result[index++] = nums[left++];
+        }
+        if (right < numsSize) {
+            result[index++] = nums[right++];
+        }
     }
+    
+    // Set the return size
+    *returnSize = numsSize;
+    return result;
 }
