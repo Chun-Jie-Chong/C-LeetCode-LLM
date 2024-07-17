@@ -19,3 +19,4 @@ template-da/
 *.tgz
 VERSION
 VERSION.xml
+.DS_Store
