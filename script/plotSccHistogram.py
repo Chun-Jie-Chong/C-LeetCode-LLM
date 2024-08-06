@@ -1,5 +1,18 @@
+# This is a Python script that reads two input files containing the output of the `scc` tool 
+# for two different codebases and plots the complexity or complexity per code for each file. 
+# The script takes two input files and a metric (complexity or complexity per code) as arguments 
+# and generates a histogram comparing the metric for each file.
+
+# First argument: metric (complexity or complexity/code)
+# Second argument: input file 1 (output of scc tool for ChatGPT codebase)
+# Third argument: input file 2 (output of scc tool for human codebase)
+
+# Example usage:
+# python3 plotSccHistogram.py complexity scc_chatgpt.txt scc_human.txt
+
 import matplotlib.pyplot as plt
 import numpy as np
+import argparse
 
 # Function to parse the input text
 def parse_input(input_text):
@@ -22,53 +35,70 @@ def parse_input(input_text):
                     file_data.append((file_name, complexity, complexity_per_code))
     return file_data
 
-# Read the input from a file
-with open('../code/output.txt', 'r') as file:
-    input_text = file.read()
+# Function to plot the data
+def plot_data(file_data1, file_data2, metric):
+    # Sort the first file data by the selected metric
+    if metric == 'complexity':
+        file_data1.sort(key=lambda x: x[1])
+        y1_index = 1
+    elif metric == 'complexity/code':
+        file_data1.sort(key=lambda x: x[2])
+        y1_index = 2
+        
+    # Prepare data for plotting
+    file_names1 = [data[0][0:4] for data in file_data1]
+    y1_values = [data[y1_index] for data in file_data1]
 
-# Extract data from the input text
-file_data = parse_input(input_text)
+    # Create a dictionary for the second file data for easy lookup
+    file_data2_dict = {data[0][0:4]: data[y1_index] for data in file_data2}
 
-# Prepare data for plotting
-file_names = [data[0] for data in file_data]
-complexities = [data[1] for data in file_data]
-complexity_per_code = [data[2] for data in file_data]
+    # Align the second file data to the sorted file names of the first file
+    y2_values = [file_data2_dict.get(file_name, 0) for file_name in file_names1]
+    
+    counter = 0
+    for y1, y2 in zip(y1_values, y2_values):
+        if y1 > y2:
+            counter += 1
+    print(f"ChatGPT has {counter} files with higher {metric} than human")
 
-# Plotting the histogram
-x = np.arange(len(file_names))
-width = 0.35
+    # Plotting the histograms
+    x = np.arange(len(file_names1))
+    width = 0.35
 
-fig, ax1 = plt.subplots(figsize=(14, 8))  # Width: 14, Height: 8
-#fig, ax1 = plt.subplots()
-# Plotting complexities on the primary y-axis (left side)
-rects1 = ax1.bar(x - width/2, complexities, width, label='Complexity', color='royalblue')
-ax1.set_xlabel('File Names')
-ax1.set_ylabel('Complexity', color='royalblue')
-ax1.set_title('Code Complexity (LeetCode-LLM)')
-ax1.set_xticks(x)
-ax1.tick_params(axis='x', rotation=70)
-ax1.set_xticklabels(file_names)
-ax1.legend(loc='upper left')
+    fig, ax = plt.subplots(figsize=(14, 8))  # Width: 14, Height: 8
+    # Plotting the selected metric for both files as histograms
+    ax.bar(x - width/2, y1_values, width, color='royalblue', label='ChatGPT')
+    ax.bar(x + width/2, y2_values, width, color='sandybrown', label='Human')
+    ax.set_title(f'{metric} (sorted based on ChatGPT files)')
+    ax.legend(loc='upper left')
 
-# Creating a secondary y-axis (right side) for complexity/code
-ax2 = ax1.twinx()
-rects2 = ax2.bar(x + width/2, complexity_per_code, width, label='Complexity/Code', color='sandybrown')
-ax2.set_ylabel('Complexity/LOC', color='sandybrown')
-ax2.legend(loc='upper right')
+    fig.tight_layout()
 
-# Add values on top of the bars
-def autolabel(rects, ax):
-    for rect in rects:
-        height = rect.get_height()
-        ax.annotate('{}'.format(height),
-                    xy=(rect.get_x() + rect.get_width() / 2, height),
-                    xytext=(0, 3),  # 3 points vertical offset
-                    textcoords="offset points",
-                    ha='center', va='bottom')
+    plt.show()
 
-autolabel(rects1, ax1)
-autolabel(rects2, ax2)
+# Main function to handle arguments and plot
+def main():
+    parser = argparse.ArgumentParser(description='Plot complexity or complexity/code from two input files.')
+    parser.add_argument('metric', choices=['complexity', 'complexity/code'], help='Metric to plot: complexity or complexity/code')
+    parser.add_argument('input1', help='First input file')
+    parser.add_argument('input2', help='Second input file')
 
-fig.tight_layout()
+    args = parser.parse_args()
 
-plt.show()
+    # Read the input from the first file
+    with open(args.input1, 'r') as file1:
+        input_text1 = file1.read()
+
+    # Read the input from the second file
+    with open(args.input2, 'r') as file2:
+        input_text2 = file2.read()
+
+    # Extract data from the input texts
+    file_data1 = parse_input(input_text1)
+    file_data2 = parse_input(input_text2)
+
+    # Plot the data based on the selected metric
+    plot_data(file_data1, file_data2, args.metric)
+
+if __name__ == "__main__":
+    main()
