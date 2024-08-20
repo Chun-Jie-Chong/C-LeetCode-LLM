@@ -1,30 +1,26 @@
-# This is a Python script that reads two input files containing the output of the `scc` tool 
-# for two different codebases and plots the complexity or complexity per code for each file. 
-# The script takes two input files and a metric (complexity or complexity per code) as arguments 
-# and generates a histogram comparing the metric for each file.
-
-# First argument: metric (complexity or complexity/code)
-# Second argument: input file 1 (output of scc tool for ChatGPT codebase)
-# Third argument: input file 2 (output of scc tool for human codebase)
-# Fourth argument: input file 3 (output of calculateTernaryOperator.py for ChatGPT codebase)
-# Fifth argument: input file 4 (output of calculateTernaryOperator.py for human codebase)
+# plot two bean graphs side by side (chatgpt vs human)
+# first argument: complexity or complexity/code
+# second argument: chatgpt output file
+# third argument: human output file
+# Forth argument: chatgpt ternary operator output file
+# Fifth argument: human ternary operator output file
 
 # Example usage:
-# python3 plotSccHistogram.py complexity scc_chatgpt.txt scc_human.txt
+# python3 script_name.py complexity scc_chatgpt.txt scc_human.txt
 
 import matplotlib.pyplot as plt
+import seaborn as sns
 import numpy as np
+import pandas as pd
 import argparse
 
 # Function to parse the input text
 def parse_input(input_text):
     entries = [x.strip() for x in input_text.split("----------------------------------------------------------------------------------------------------------------------------------------------------------------")]
-    # print(entries)
     file_data = []
 
     for entry in entries:
         if "Processing" in entry:
-            entry.strip()
             lines = entry.splitlines()
             file_name = lines[0].split("Processing ")[1].split("...")[0].strip()
             for line in lines:
@@ -32,8 +28,7 @@ def parse_input(input_text):
                     parts = line.split()
                     code = int(parts[-2])
                     complexity = int(parts[-1])
-                    complexity_per_code = round (complexity / code, 2)
-                    # print(file_name, complexity, complexity_per_code)
+                    complexity_per_code = complexity / code
                     file_data.append((file_name, complexity, complexity_per_code, code))
     return file_data
 
@@ -68,49 +63,37 @@ def plot_data(file_data1, file_data2, ternary_1, ternary_2, metric):
                 newComplexityPerCode = newComplexity / data[3]
                 file_data2[i] = (file_name, newComplexity, newComplexityPerCode, data[3])
                 break
-    # Sort the first file data by the selected metric
+    
     if metric == 'complexity':
-        file_data1.sort(key=lambda x: x[1])
-        y1_index = 1
+        y_index = 1
     elif metric == 'complexity/code':
-        file_data1.sort(key=lambda x: x[2])
-        y1_index = 2
-        
-    # Prepare data for plotting
-    file_names1 = [data[0][0:4] for data in file_data1]
-    y1_values = [data[y1_index] for data in file_data1]
+        y_index = 2
     
-    print(file_names1)
-
-    # Create a dictionary for the second file data for easy lookup
-    file_data2_dict = {data[0][0:4]: data[y1_index] for data in file_data2}
-
-    # Align the second file data to the sorted file names of the first file
-    y2_values = [file_data2_dict.get(file_name, 0) for file_name in file_names1]
+    # Actual data arrays
+    group_a = [data[y_index] for data in file_data1]
+    group_b = [data[y_index] for data in file_data2]
     
-    print(y1_values)
-    print(y2_values)
-    
-    counter = 0
-    for y1, y2 in zip(y1_values, y2_values):
-        if y1 > y2:
-            counter += 1
-    print(f"ChatGPT has {counter} files with higher {metric} than human")
+    print(f"ChatGPT: {group_a}")
+    print(f"Human: {group_b}")
 
-    # Plotting the histograms
-    x = np.arange(len(file_names1))
-    width = 0.35
+    # Combine the data into a DataFrame
+    data = pd.DataFrame({
+        'Value': group_a + group_b,
+        'Group': ['ChatGPT-4o'] * len(group_a) + ['Human'] * len(group_b)
+    })
 
-    fig, ax = plt.subplots(figsize=(14, 8))  # Width: 14, Height: 8
-    # Plotting the selected metric for both files as histograms
-    ax.bar(x - width/2, y1_values, width, color='royalblue', label='ChatGPT')
-    ax.bar(x + width/2, y2_values, width, color='sandybrown', label='Human')
-    ax.set_title(f'Leetcode {metric} (sorted based on ChatGPT files)')
-    ax.legend(loc='upper left')
+    # Create the bean plot (violin plot)
+    plt.figure(figsize=(8, 6))
+    sns.violinplot(x='Group', y='Value', data=data, inner="point", density_norm="width", bw_adjust=0.5, hue="Group", palette={'ChatGPT-4o': 'royalblue', 'Human': 'sandybrown'})
 
-    fig.tight_layout()
+    # Add labels and title
+    plt.xlabel('Group')
+    plt.ylabel('Value')
+    plt.title(f'Leetcode {metric} by group'.capitalize())
 
+    # Display the plot
     plt.show()
+
 
 # Main function to handle arguments and plot
 def main():
@@ -150,3 +133,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

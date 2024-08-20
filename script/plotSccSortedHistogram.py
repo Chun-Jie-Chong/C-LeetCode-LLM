@@ -1,5 +1,6 @@
 # First argument: metric to plot (complexity or complexity/code)
-# Second argument: input file
+# Second argument: input file (output of scc tool)
+# Third argument: input file for ternary operator (output from caluculateTernaryOperator.py)
 # Third argument: legend to show (ChatGPT or Human)
 # Examples:
 # python3 plotSortedComplexityCode.py complexity/code ../src/output.txt ChatGPT
@@ -24,25 +25,51 @@ def parse_input(input_text):
                     code = float(parts[-2])
                     complexity = float(parts[-1])
                     complexity_per_code = complexity / code
-                    file_data.append((file_name, complexity, complexity_per_code))
+                    file_data.append((file_name, complexity, complexity_per_code, code))
+    return file_data
+
+def parse_ternary_operator(input_text):
+    entries = [x.strip() for x in input_text.splitlines()]
+    file_data = []
+
+    for entry in entries:
+        parts = entry.split(':')
+        file_name = parts[0]
+        complexity = int(parts[1])
+        file_data.append((file_name, complexity))
     return file_data
 
 # Function to plot the data
-def plot_data(file_data, metric, legend):
-    # Sort the first file data by the selected metric
+def plot_data(file_data, file_data2, metric, legend):
+        
+    if legend == 'ChatGPT-4o':
+        color = 'royalblue'
+    elif legend == 'Human':
+        color = 'sandybrown'
+        
+    # print(file_data)
+    # print(file_data2)
+    
+    # Match file name in file_data with file_data2 and add complexity from file_data2 to file_data
+    for i, data in enumerate(file_data):
+        file_name = data[0]
+        for data2 in file_data2:
+            if data2[0] == file_name:
+                newComplexity = data2[1] + data[1]
+                newComplexityPerCode = newComplexity / data[3]
+                file_data[i] = (file_name, newComplexity, newComplexityPerCode, data[3])
+                break
+            
+    # Sort the file data by the selected metric
     if metric == 'complexity':
         file_data.sort(key=lambda x: x[1])
         y_index = 1
     elif metric == 'complexity/code':
         file_data.sort(key=lambda x: x[2])
         y_index = 2
-        
-    if legend == 'ChatGPT':
-        color = 'royalblue'
-    elif legend == 'Human':
-        color = 'sandybrown'
     
-
+    # print("Result:")
+    # print(file_data)
 
     # Prepare data for plotting
     file_names = [data[0] for data in file_data]
@@ -92,19 +119,25 @@ def main():
     parser = argparse.ArgumentParser(description='Plot complexity or complexity/code from two input files.')
     parser.add_argument('metric', choices=['complexity', 'complexity/code'], help='Metric to plot: complexity or complexity/code')
     parser.add_argument('input', help='Input file')
-    parser.add_argument('legend', choices=['ChatGPT', 'Human'], help='Legend to show: ChatGPT or Human')
+    parser.add_argument('input2', help='Input file for ternary operator')
+    parser.add_argument('legend', choices=['ChatGPT-4o', 'Human'], help='Legend to show: ChatGPT-4o or Human')
 
     args = parser.parse_args()
 
     # Read the input from the first file
     with open(args.input, 'r') as file:
         input_text = file.read()
+        
+    with open(args.input2, 'r') as file2:
+        input_text2 = file2.read()
 
     # Extract data from the input texts
     file_data = parse_input(input_text)
+    
+    file_data2 = parse_ternary_operator(input_text2)
 
     # Plot the data based on the selected metric
-    plot_data(file_data, args.metric, args.legend)
+    plot_data(file_data, file_data2, args.metric, args.legend)
 
 if __name__ == "__main__":
     main()
