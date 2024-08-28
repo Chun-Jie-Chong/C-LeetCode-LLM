@@ -1,0 +1,61 @@
+Analyzing and compiling 10_response.c to 10_response.o
+10_response.c:23:28: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+                dp[i][j] = dp[i][j - 2];
+                           ^~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 10_response.c succeeded
+Analyzing and compiling 115_response.c to 115_response.o
+Compilation and analysis of 115_response.c succeeded
+Analyzing and compiling 11_response.c to 11_response.o
+Compilation and analysis of 11_response.c succeeded
+Analyzing and compiling 138_response.c to 138_response.o
+Compilation and analysis of 138_response.c succeeded
+Analyzing and compiling 14_response.c to 14_response.o
+Compilation and analysis of 14_response.c succeeded
+Analyzing and compiling 15_response.c to 15_response.o
+15_response.c:18:38: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    result = (int **)malloc(capacity * sizeof(int *));
+                            ~~~~~~~~~^~~~~~~~~~~~~~~
+15_response.c:19:49: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = (int *)malloc(capacity * sizeof(int));
+                                       ~~~~~~~~~^~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 15_response.c succeeded
+Analyzing and compiling 2002_response.c to 2002_response.o
+Compilation and analysis of 2002_response.c succeeded
+Analyzing and compiling 2_response.c to 2_response.o
+Compilation and analysis of 2_response.c succeeded
+Analyzing and compiling 3_response.c to 3_response.o
+Compilation and analysis of 3_response.c succeeded
+Analyzing and compiling 424_response.c to 424_response.o
+Compilation and analysis of 424_response.c succeeded
+Analyzing and compiling 435_response.c to 435_response.o
+Compilation and analysis of 435_response.c succeeded
+Analyzing and compiling 438_response.c to 438_response.o
+438_response.c:9:38: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *result = (int*)malloc(s_len * sizeof(int));
+                               ~~~~~~^~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 438_response.c succeeded
+Analyzing and compiling 4_response.c to 4_response.o
+Compilation and analysis of 4_response.c succeeded
+Analyzing and compiling 523_response.c to 523_response.o
+523_response.c:5:39: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *remToIndex = (int *)malloc(k * sizeof(int));
+                                    ~~^~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 523_response.c succeeded
+Analyzing and compiling 5_response.c to 5_response.o
+5_response.c:26:25: error: call to undeclared library function 'malloc' with type 'void *(unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    char *res = (char *)malloc((maxLen + 1) * sizeof(char));
+                        ^
+5_response.c:26:25: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+1 error generated.
+Compilation and analysis of 5_response.c failed
+Analyzing and compiling 7_response.c to 7_response.o
+Compilation and analysis of 7_response.c succeeded
+Analyzing and compiling 846_response.c to 846_response.o
+Compilation and analysis of 846_response.c succeeded
+Analyzing and compiling 9_response.c to 9_response.o
+Compilation and analysis of 9_response.c succeeded
+Compilation and static analysis completed.

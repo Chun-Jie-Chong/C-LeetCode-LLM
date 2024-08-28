@@ -1,0 +1,151 @@
+URL: https://leetcode.com/problems/combination-sum/description/
+Title: 39. Combination Sum
+Difficulty: Medium
+Content:
+Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
+The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the
+frequency
+of at least one of the chosen numbers is different.
+The test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
+  Example 1:
+Input: candidates = [2,3,6,7], target = 7
+Output: [[2,2,3],[7]]
+Explanation:
+2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
+7 is a candidate, and 7 = 7.
+These are the only two combinations.
+Example 2:
+Input: candidates = [2,3,5], target = 8
+Output: [[2,2,2,2],[2,3,3],[3,5]]
+Example 3:
+Input: candidates = [2], target = 1
+Output: []
+  Constraints:
+1 <= candidates.length <= 30
+2 <= candidates[i] <= 40
+All elements of candidates are distinct.
+1 <= target <= 40
+
+--------------------------------------------------------------------------------
+
+URL: https://leetcode.com/problems/word-search/description/
+Title: 79. Word Search
+Difficulty: Medium
+Content:
+Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
+  Example 1:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+Output: true
+Example 2:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
+Output: true
+Example 3:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
+Output: false
+  Constraints:
+m == board.length
+n = board[i].length
+1 <= m, n <= 6
+1 <= word.length <= 15
+board and word consists of only lowercase and uppercase English letters.
+  Follow up: Could you use search pruning to make your solution faster with a larger board?
+
+--------------------------------------------------------------------------------
+
+URL: https://leetcode.com/problems/stone-game-iii/description/
+Title: 1406. Stone Game III
+Difficulty: Hard
+Content:
+Alice and Bob continue their games with piles of stones. There are several stones arranged in a row, and each stone has an associated value which is an integer given in the array stoneValue.
+Alice and Bob take turns, with Alice starting first. On each player's turn, that player can take 1, 2, or 3 stones from the first remaining stones in the row.
+The score of each player is the sum of the values of the stones taken. The score of each player is 0 initially.
+The objective of the game is to end with the highest score, and the winner is the player with the highest score and there could be a tie. The game continues until all the stones have been taken.
+Assume Alice and Bob play optimally.
+Return "Alice" if Alice will win, "Bob" if Bob will win, or "Tie" if they will end the game with the same score.
+  Example 1:
+Input: stoneValue = [1,2,3,7]
+Output: "Bob"
+Explanation: Alice will always lose. Her best move will be to take three piles and the score become 6. Now the score of Bob is 7 and Bob wins.
+Example 2:
+Input: stoneValue = [1,2,3,-9]
+Output: "Alice"
+Explanation: Alice must choose all the three piles at the first move to win and leave Bob with negative score.
+If Alice chooses one pile her score will be 1 and the next move Bob's score becomes 5. In the next move, Alice will take the pile with value = -9 and lose.
+If Alice chooses two piles her score will be 3 and the next move Bob's score becomes 3. In the next move, Alice will take the pile with value = -9 and also lose.
+Remember that both play optimally so here Alice will choose the scenario that makes her win.
+Example 3:
+Input: stoneValue = [1,2,3,6]
+Output: "Tie"
+Explanation: Alice cannot win this game. She can end the game in a draw if she decided to choose all the first three piles, otherwise she will lose.
+  Constraints:
+1 <= stoneValue.length <= 5 * 104
+-1000 <= stoneValue[i] <= 1000
+
+--------------------------------------------------------------------------------
+
+URL: https://leetcode.com/problems/combination-sum-ii/description/
+Title: 40. Combination Sum II
+Difficulty: Medium
+Content:
+Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
+Each number in candidates may only be used once in the combination.
+Note: The solution set must not contain duplicate combinations.
+  Example 1:
+Input: candidates = [10,1,2,7,6,1,5], target = 8
+Output: 
+[
+[1,1,6],
+[1,2,5],
+[1,7],
+[2,6]
+]
+Example 2:
+Input: candidates = [2,5,2,1,2], target = 5
+Output: 
+[
+[1,2,2],
+[5]
+]
+  Constraints:
+1 <= candidates.length <= 100
+1 <= candidates[i] <= 50
+1 <= target <= 30
+
+--------------------------------------------------------------------------------
+
+URL: https://leetcode.com/problems/merge-triplets-to-form-target-triplet/description/
+Title: 1899. Merge Triplets to Form Target Triplet
+Difficulty: Medium
+Content:
+A triplet is an array of three integers. You are given a 2D integer array triplets, where triplets[i] = [ai, bi, ci] describes the ith triplet. You are also given an integer array target = [x, y, z] that describes the triplet you want to obtain.
+To obtain target, you may apply the following operation on triplets any number of times (possibly zero):
+Choose two indices (0-indexed) i and j (i != j) and update triplets[j] to become [max(ai, aj), max(bi, bj), max(ci, cj)].
+For example, if triplets[i] = [2, 5, 3] and triplets[j] = [1, 7, 5], triplets[j] will be updated to [max(2, 1), max(5, 7), max(3, 5)] = [2, 7, 5].
+Return true if it is possible to obtain the target triplet [x, y, z] as an element of triplets, or false otherwise.
+  Example 1:
+Input: triplets = [[2,5,3],[1,8,4],[1,7,5]], target = [2,7,5]
+Output: true
+Explanation: Perform the following operations:
+- Choose the first and last triplets [[2,5,3],[1,8,4],[1,7,5]]. Update the last triplet to be [max(2,1), max(5,7), max(3,5)] = [2,7,5]. triplets = [[2,5,3],[1,8,4],[2,7,5]]
+The target triplet [2,7,5] is now an element of triplets.
+Example 2:
+Input: triplets = [[3,4,5],[4,5,6]], target = [3,2,5]
+Output: false
+Explanation: It is impossible to have [3,2,5] as an element because there is no 2 in any of the triplets.
+Example 3:
+Input: triplets = [[2,5,3],[2,3,4],[1,2,5],[5,2,3]], target = [5,5,5]
+Output: true
+Explanation: Perform the following operations:
+- Choose the first and third triplets [[2,5,3],[2,3,4],[1,2,5],[5,2,3]]. Update the third triplet to be [max(2,1), max(5,2), max(3,5)] = [2,5,5]. triplets = [[2,5,3],[2,3,4],[2,5,5],[5,2,3]].
+- Choose the third and fourth triplets [[2,5,3],[2,3,4],[2,5,5],[5,2,3]]. Update the fourth triplet to be [max(2,5), max(5,2), max(5,3)] = [5,5,5]. triplets = [[2,5,3],[2,3,4],[2,5,5],[5,5,5]].
+The target triplet [5,5,5] is now an element of triplets.
+  Constraints:
+1 <= triplets.length <= 105
+triplets[i].length == target.length == 3
+1 <= ai, bi, ci, x, y, z <= 1000
+
+below is the function declaration:
+bool mergeTriplets(int** triplets, int tripletsSize, int* tripletsColSize, int* target, int targetSize) {
+    
+}

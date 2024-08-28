@@ -1,0 +1,19 @@
+Analyzing and compiling 19_response.c to 19_response.o
+19_response.c:24:37: warning: Access to field 'next' results in a dereference of a null pointer (loaded from variable 'second') [core.NullDereference]
+    struct ListNode* nodeToDelete = second->next;
+                                    ^~~~~~~~~~~~
+19_response.c:25:20: warning: Access to field 'next' results in a dereference of a null pointer (loaded from field 'next') [core.NullDereference]
+    second->next = second->next->next;
+                   ^~~~~~~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 19_response.c succeeded
+Analyzing and compiling 417_response.c to 417_response.o
+417_response.c:29:29: warning: Loss of sign in implicit conversion [alpha.core.Conversion]
+    result = (int **)malloc(m * n * sizeof(int *));
+                            ^~~~~
+417_response.c:30:35: warning: Loss of sign in implicit conversion [alpha.core.Conversion]
+    resultColSize = (int *)malloc(m * n * sizeof(int));
+                                  ^~~~~
+2 warnings generated.
+Compilation and analysis of 417_response.c succeeded
+Compilation and static analysis completed.

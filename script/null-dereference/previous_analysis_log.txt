@@ -1,0 +1,23 @@
+Analyzing and compiling 0019_response.c to 0019_response.o
+0019_response.c:15:16: warning: Access to field 'next' results in a dereference of a null pointer (loaded from variable 'head') [core.NullDereference]
+        head = head->next;
+               ^~~~~~~~~~
+0019_response.c:24:18: warning: Access to field 'next' results in a dereference of a null pointer (loaded from field 'next') [core.NullDereference]
+    slow->next = slow->next->next;
+                 ^~~~~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 0019_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0417_response.c to 0417_response.o
+0417_response.c:18:48: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    bool** pacificReachable = (bool**)malloc(m * sizeof(bool*));
+                                             ~~^~~~~~~~~~~~~~~
+0417_response.c:19:49: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    bool** atlanticReachable = (bool**)malloc(m * sizeof(bool*));
+                                              ~~^~~~~~~~~~~~~~~
+0417_response.c:63:23: warning: Array access results in an undefined pointer dereference [core.NullDereference]
+    visited[row][col] = true;
+    ~~~~~~~~~~~~~~~~~~^~~~~~
+3 warnings generated.
+Compilation and analysis of 0417_response.c succeeded
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,399 @@
+URL: https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+Title: 84. Largest Rectangle in Histogram
+Difficulty: Hard
+Content:
+Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+  Example 1:
+Input: heights = [2,1,5,6,2,3]
+Output: 10
+Explanation: The above is a histogram where width of each bar is 1.
+The largest rectangle is shown in the red area, which has an area = 10 units.
+Example 2:
+Input: heights = [2,4]
+Output: 4
+  Constraints:
+1 <= heights.length <= 105
+0 <= heights[i] <= 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/
+Title: 673. Number of Longest Increasing Subsequence
+Difficulty: Medium
+Content:
+Given an integer array nums, return the number of longest increasing subsequences.
+Notice that the sequence has to be strictly increasing.
+  Example 1:
+Input: nums = [1,3,5,4,7]
+Output: 2
+Explanation: The two longest increasing subsequences are [1, 3, 4, 7] and [1, 3, 5, 7].
+Example 2:
+Input: nums = [2,2,2,2,2]
+Output: 5
+Explanation: The length of the longest increasing subsequence is 1, and there are 5 increasing subsequences of length 1, so output 5.
+  Constraints:
+1 <= nums.length <= 2000
+-106 <= nums[i] <= 106
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/sort-an-array/description/
+Title: 912. Sort an Array
+Difficulty: Medium
+Content:
+Given an array of integers nums, sort the array in ascending order and return it.
+You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
+  Example 1:
+Input: nums = [5,2,3,1]
+Output: [1,2,3,5]
+Explanation: After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed (for example, 1 and 5).
+Example 2:
+Input: nums = [5,1,1,2,0,0]
+Output: [0,0,1,1,2,5]
+Explanation: Note that the values of nums are not necessairly unique.
+  Constraints:
+1 <= nums.length <= 5 * 104
+-5 * 104 <= nums[i] <= 5 * 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/generate-parentheses/description/
+Title: 22. Generate Parentheses
+Difficulty: Medium
+Content:
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+  Example 1:
+Input: n = 3
+Output: ["((()))","(()())","(())()","()(())","()()()"]
+Example 2:
+Input: n = 1
+Output: ["()"]
+  Constraints:
+1 <= n <= 8
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/daily-temperatures/description/
+Title: 739. Daily Temperatures
+Difficulty: Medium
+Content:
+Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
+  Example 1:
+Input: temperatures = [73,74,75,71,69,72,76,73]
+Output: [1,1,4,2,1,1,0,0]
+Example 2:
+Input: temperatures = [30,40,50,60]
+Output: [1,1,1,0]
+Example 3:
+Input: temperatures = [30,60,90]
+Output: [1,1,0]
+  Constraints:
+1 <= temperatures.length <= 105
+30 <= temperatures[i] <= 100
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/subsets/description/
+Title: 78. Subsets
+Difficulty: Medium
+Content:
+Given an integer array nums of unique elements, return all possible
+subsets
+(the power set).
+The solution set must not contain duplicate subsets. Return the solution in any order.
+  Example 1:
+Input: nums = [1,2,3]
+Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+Example 2:
+Input: nums = [0]
+Output: [[],[0]]
+  Constraints:
+1 <= nums.length <= 10
+-10 <= nums[i] <= 10
+All the numbers of nums are unique.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/reconstruct-itinerary/description/
+Title: 332. Reconstruct Itinerary
+Difficulty: Hard
+Content:
+You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it.
+All of the tickets belong to a man who departs from "JFK", thus, the itinerary must begin with "JFK". If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.
+For example, the itinerary ["JFK", "LGA"] has a smaller lexical order than ["JFK", "LGB"].
+You may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.
+  Example 1:
+Input: tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
+Output: ["JFK","MUC","LHR","SFO","SJC"]
+Example 2:
+Input: tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+Output: ["JFK","ATL","JFK","SFO","ATL","SFO"]
+Explanation: Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"] but it is larger in lexical order.
+  Constraints:
+1 <= tickets.length <= 300
+tickets[i].length == 2
+fromi.length == 3
+toi.length == 3
+fromi and toi consist of uppercase English letters.
+fromi != toi
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/word-search-ii/description/
+Title: 212. Word Search II
+Difficulty: Hard
+Content:
+Given an m x n board of characters and a list of strings words, return all words on the board.
+Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
+  Example 1:
+Input: board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]
+Output: ["eat","oath"]
+Example 2:
+Input: board = [["a","b"],["c","d"]], words = ["abcb"]
+Output: []
+  Constraints:
+m == board.length
+n == board[i].length
+1 <= m, n <= 12
+board[i][j] is a lowercase English letter.
+1 <= words.length <= 3 * 104
+1 <= words[i].length <= 10
+words[i] consists of lowercase English letters.
+All the strings of words are unique.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/largest-number/description/
+Title: 179. Largest Number
+Difficulty: Medium
+Content:
+Given a list of non-negative integers nums, arrange them such that they form the largest number and return it.
+Since the result may be very large, so you need to return a string instead of an integer.
+  Example 1:
+Input: nums = [10,2]
+Output: "210"
+Example 2:
+Input: nums = [3,30,34,5,9]
+Output: "9534330"
+  Constraints:
+1 <= nums.length <= 100
+0 <= nums[i] <= 109
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/combination-sum-ii/description/
+Title: 40. Combination Sum II
+Difficulty: Medium
+Content:
+Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
+Each number in candidates may only be used once in the combination.
+Note: The solution set must not contain duplicate combinations.
+  Example 1:
+Input: candidates = [10,1,2,7,6,1,5], target = 8
+Output: 
+[
+[1,1,6],
+[1,2,5],
+[1,7],
+[2,6]
+]
+Example 2:
+Input: candidates = [2,5,2,1,2], target = 5
+Output: 
+[
+[1,2,2],
+[5]
+]
+  Constraints:
+1 <= candidates.length <= 100
+1 <= candidates[i] <= 50
+1 <= target <= 30
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/subsets-ii/description/
+Title: 90. Subsets II
+Difficulty: Medium
+Content:
+Given an integer array nums that may contain duplicates, return all possible
+subsets
+(the power set).
+The solution set must not contain duplicate subsets. Return the solution in any order.
+  Example 1:
+Input: nums = [1,2,2]
+Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
+Example 2:
+Input: nums = [0]
+Output: [[],[0]]
+  Constraints:
+1 <= nums.length <= 10
+-10 <= nums[i] <= 10
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/car-fleet/description/
+Title: 853. Car Fleet
+Difficulty: Medium
+Content:
+There are n cars at given miles away from the starting mile 0, traveling to reach the mile target.
+You are given two integer array position and speed, both of length n, where position[i] is the starting mile of the ith car and speed[i] is the speed of the ith car in miles per hour.
+A car cannot pass another car, but it can catch up and then travel next to it at the speed of the slower car.
+A car fleet is a car or cars driving next to each other. The speed of the car fleet is the minimum speed of any car in the fleet.
+If a car catches up to a car fleet at the mile target, it will still be considered as part of the car fleet.
+Return the number of car fleets that will arrive at the destination.
+  Example 1:
+Input: target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]
+Output: 3
+Explanation:
+The cars starting at 10 (speed 2) and 8 (speed 4) become a fleet, meeting each other at 12. The fleet forms at target.
+The car starting at 0 (speed 1) does not catch up to any other car, so it is a fleet by itself.
+The cars starting at 5 (speed 1) and 3 (speed 3) become a fleet, meeting each other at 6. The fleet moves at speed 1 until it reaches target.
+Example 2:
+Input: target = 10, position = [3], speed = [3]
+Output: 1
+Explanation:
+There is only one car, hence there is only one fleet.
+Example 3:
+Input: target = 100, position = [0,2,4], speed = [4,2,1]
+Output: 1
+Explanation:
+The cars starting at 0 (speed 4) and 2 (speed 2) become a fleet, meeting each other at 4. The car starting at 4 (speed 1) travels to 5.
+Then, the fleet at 4 (speed 2) and the car at position 5 (speed 1) become one fleet, meeting each other at 6. The fleet moves at speed 1 until it reaches target.
+  Constraints:
+n == position.length == speed.length
+1 <= n <= 105
+0 < target <= 106
+0 <= position[i] < target
+All the values of position are unique.
+0 < speed[i] <= 106
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/pacific-atlantic-water-flow/description/
+Title: 417. Pacific Atlantic Water Flow
+Difficulty: Medium
+Content:
+There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean. The Pacific Ocean touches the island's left and top edges, and the Atlantic Ocean touches the island's right and bottom edges.
+The island is partitioned into a grid of square cells. You are given an m x n integer matrix heights where heights[r][c] represents the height above sea level of the cell at coordinate (r, c).
+The island receives a lot of rain, and the rain water can flow to neighboring cells directly north, south, east, and west if the neighboring cell's height is less than or equal to the current cell's height. Water can flow from any cell adjacent to an ocean into the ocean.
+Return a 2D list of grid coordinates result where result[i] = [ri, ci] denotes that rain water can flow from cell (ri, ci) to both the Pacific and Atlantic oceans.
+  Example 1:
+Input: heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
+Output: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
+Explanation: The following cells can flow to the Pacific and Atlantic oceans, as shown below:
+[0,4]: [0,4] -> Pacific Ocean 
+       [0,4] -> Atlantic Ocean
+[1,3]: [1,3] -> [0,3] -> Pacific Ocean 
+       [1,3] -> [1,4] -> Atlantic Ocean
+[1,4]: [1,4] -> [1,3] -> [0,3] -> Pacific Ocean 
+       [1,4] -> Atlantic Ocean
+[2,2]: [2,2] -> [1,2] -> [0,2] -> Pacific Ocean 
+       [2,2] -> [2,3] -> [2,4] -> Atlantic Ocean
+[3,0]: [3,0] -> Pacific Ocean 
+       [3,0] -> [4,0] -> Atlantic Ocean
+[3,1]: [3,1] -> [3,0] -> Pacific Ocean 
+       [3,1] -> [4,1] -> Atlantic Ocean
+[4,0]: [4,0] -> Pacific Ocean 
+       [4,0] -> Atlantic Ocean
+Note that there are other possible paths for these cells to flow to the Pacific and Atlantic oceans.
+Example 2:
+Input: heights = [[1]]
+Output: [[0,0]]
+Explanation: The water can flow from the only cell to the Pacific and Atlantic oceans.
+  Constraints:
+m == heights.length
+n == heights[r].length
+1 <= m, n <= 200
+0 <= heights[r][c] <= 105
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/clone-graph/description/
+Title: 133. Clone Graph
+Difficulty: Medium
+Content:
+Given a reference of a node in a connected undirected graph.
+Return a deep copy (clone) of the graph.
+Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
+class Node {
+    public int val;
+    public List<Node> neighbors;
+}
+  Test case format:
+For simplicity, each node's value is the same as the node's index (1-indexed). For example, the first node with val == 1, the second node with val == 2, and so on. The graph is represented in the test case using an adjacency list.
+An adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph.
+The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph.
+  Example 1:
+Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+Output: [[2,4],[1,3],[2,4],[1,3]]
+Explanation: There are 4 nodes in the graph.
+1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+Example 2:
+Input: adjList = [[]]
+Output: [[]]
+Explanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.
+Example 3:
+Input: adjList = []
+Output: []
+Explanation: This an empty graph, it does not have any nodes.
+  Constraints:
+The number of nodes in the graph is in the range [0, 100].
+1 <= Node.val <= 100
+Node.val is unique for each node.
+There are no repeated edges and no self-loops in the graph.
+The Graph is connected and all nodes can be visited starting from the given node.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/word-search/description/
+Title: 79. Word Search
+Difficulty: Medium
+Content:
+Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
+  Example 1:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+Output: true
+Example 2:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
+Output: true
+Example 3:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
+Output: false
+  Constraints:
+m == board.length
+n = board[i].length
+1 <= m, n <= 6
+1 <= word.length <= 15
+board and word consists of only lowercase and uppercase English letters.
+  Follow up: Could you use search pruning to make your solution faster with a larger board?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/partition-labels/description/
+Title: 763. Partition Labels
+Difficulty: Medium
+Content:
+You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
+Note that the partition is done so that after concatenating all the parts in order, the resultant string should be s.
+Return a list of integers representing the size of these parts.
+  Example 1:
+Input: s = "ababcbacadefegdehijhklij"
+Output: [9,7,8]
+Explanation:
+The partition is "ababcbaca", "defegde", "hijhklij".
+This is a partition so that each letter appears in at most one part.
+A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits s into less parts.
+Example 2:
+Input: s = "eccbbbbdec"
+Output: [10]
+  Constraints:
+1 <= s.length <= 500
+s consists of lowercase English letters.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/n-ary-tree-preorder-traversal/description/
+Title: 589. N-ary Tree Preorder Traversal
+Difficulty: Easy
+Content:
+Given the root of an n-ary tree, return the preorder traversal of its nodes' values.
+Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples)
+  Example 1:
+Input: root = [1,null,3,2,4,null,5,6]
+Output: [1,3,5,6,2,4]
+Example 2:
+Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
+  Constraints:
+The number of nodes in the tree is in the range [0, 104].
+0 <= Node.val <= 104
+The height of the n-ary tree is less than or equal to 1000.
+  Follow up: Recursive solution is trivial, could you do it iteratively?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/pascals-triangle/description/
+Title: 118. Pascal's Triangle
+Difficulty: Easy
+Content:
+Given an integer numRows, return the first numRows of Pascal's triangle.
+In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
+  Example 1:
+Input: numRows = 5
+Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+Example 2:
+Input: numRows = 1
+Output: [[1]]
+  Constraints:
+1 <= numRows <= 30
+--------------------------------------------------------------------------------

@@ -1,0 +1,102 @@
+Analyzing and compiling 150_response.c to 150_response.o
+150_response.c:11:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int b = stack[top--];
+                    ^~~~~~~~~~~~
+150_response.c:12:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int a = stack[top--];
+                    ^~~~~~~~~~~~
+150_response.c:15:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int b = stack[top--];
+                    ^~~~~~~~~~~~
+150_response.c:16:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int a = stack[top--];
+                    ^~~~~~~~~~~~
+150_response.c:19:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int b = stack[top--];
+                    ^~~~~~~~~~~~
+150_response.c:20:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int a = stack[top--];
+                    ^~~~~~~~~~~~
+150_response.c:23:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int b = stack[top--];
+                    ^~~~~~~~~~~~
+150_response.c:24:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int a = stack[top--];
+                    ^~~~~~~~~~~~
+8 warnings generated.
+Compilation and analysis of 150_response.c succeeded
+Analyzing and compiling 1799_response.c to 1799_response.o
+Compilation and analysis of 1799_response.c succeeded
+Analyzing and compiling 215_response.c to 215_response.o
+Compilation and analysis of 215_response.c succeeded
+Analyzing and compiling 279_response.c to 279_response.o
+279_response.c:6:37: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *dp = (int *)malloc((n + 1) * sizeof(int));
+                            ~~~~~~~~^~~~~~~~~~~~~
+279_response.c:18:18: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+    int result = dp[n];
+                 ^~~~~
+2 warnings generated.
+Compilation and analysis of 279_response.c succeeded
+Analyzing and compiling 297_response.c to 297_response.o
+Compilation and analysis of 297_response.c succeeded
+Analyzing and compiling 332_response.c to 332_response.o
+332_response.c:42:52: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char **result = (char **)malloc(sizeof(char *) * (ticketsSize + 1));
+                                    ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+332_response.c:46:9: warning: Null pointer passed as 2nd argument to string copy function [unix.cstring.NullArg]
+        strcpy(result[i], itinerary->airport);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:3: note: expanded from macro 'strcpy'
+                __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 332_response.c succeeded
+Analyzing and compiling 67_response.c to 67_response.o
+67_response.c:12:27: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+    result[maxLength + 1] = '\0';
+    ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+67_response.c:14:57: warning: This statement is never executed [alpha.deadcode.UnreachableCode]
+    for (int k = 0; k < maxLength + 1; k++) result[k] = '0';
+                                                        ^~~
+67_response.c:27:34: warning: This statement is never executed [alpha.deadcode.UnreachableCode]
+    if (result[0] == '0') return result + 1;
+                                 ^~~~~~
+3 warnings generated.
+Compilation and analysis of 67_response.c succeeded
+Analyzing and compiling 682_response.c to 682_response.o
+682_response.c:5:40: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *stack = (int*) malloc(opsSize * sizeof(int));
+                               ~~~~~~~~^~~~~~~~~~~~~
+682_response.c:11:28: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+            int newScore = stack[top] + stack[top - 1];
+                           ^~~~~~~~~~
+682_response.c:11:28: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int newScore = stack[top] + stack[top - 1];
+                           ^~~~~~~~~~
+682_response.c:11:41: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int newScore = stack[top] + stack[top - 1];
+                                        ^~~~~~~~~~~~~~
+682_response.c:14:32: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+            int newScore = 2 * stack[top];
+                               ^~~~~~~~~~
+682_response.c:14:32: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int newScore = 2 * stack[top];
+                               ^~~~~~~~~~
+682_response.c:20:26: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+            stack[++top] = newScore;
+            ~~~~~~~~~~~~~^~~~~~~~~~
+682_response.c:20:26: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            stack[++top] = newScore;
+            ~~~~~~~~~~~~ ^
+8 warnings generated.
+Compilation and analysis of 682_response.c succeeded
+Analyzing and compiling 691_response.c to 691_response.o
+691_response.c:42:12: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    return dp[maxState];
+           ^~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 691_response.c succeeded
+Analyzing and compiling 740_response.c to 740_response.o
+Compilation and analysis of 740_response.c succeeded
+Compilation and static analysis completed.

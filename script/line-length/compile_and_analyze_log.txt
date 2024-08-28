@@ -1,0 +1,25 @@
+Analyzing and compiling 1406_response.c to 1406_response.o
+Compilation and analysis of 1406_response.c succeeded
+Analyzing and compiling 1899_response.c to 1899_response.o
+Compilation and analysis of 1899_response.c succeeded
+Analyzing and compiling 39_response.c to 39_response.o
+39_response.c:8:59: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        (*result)[*returnSize] = (int*)malloc(currentSize * sizeof(int));
+                                              ~~~~~~~~~~~~^~~~~~~~~~~~~
+39_response.c:31:40: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* current = (int*)malloc(target * sizeof(int));
+                                ~~~~~~~^~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 39_response.c succeeded
+Analyzing and compiling 40_response.c to 40_response.o
+40_response.c:8:55: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        results[*returnSize] = (int*)malloc(stackSize * sizeof(int));
+                                            ~~~~~~~~~~^~~~~~~~~~~~~
+40_response.c:40:46: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* stack = (int*)malloc(candidatesSize * sizeof(int));
+                              ~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 40_response.c succeeded
+Analyzing and compiling 79_response.c to 79_response.o
+Compilation and analysis of 79_response.c succeeded
+Compilation and static analysis completed.

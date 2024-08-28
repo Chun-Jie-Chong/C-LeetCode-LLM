@@ -1,0 +1,738 @@
+URL: https://leetcode.com/problems/maximize-score-after-n-operations/description/
+Title: 1799. Maximize Score After N Operations
+Difficulty: Hard
+Content:
+You are given nums, an array of positive integers of size 2 * n. You must perform n operations on this array.
+In the ith operation (1-indexed), you will:
+Choose two elements, x and y.
+Receive a score of i * gcd(x, y).
+Remove x and y from nums.
+Return the maximum score you can receive after performing n operations.
+The function gcd(x, y) is the greatest common divisor of x and y.
+  Example 1:
+Input: nums = [1,2]
+Output: 1
+Explanation: The optimal choice of operations is:
+(1 * gcd(1, 2)) = 1
+Example 2:
+Input: nums = [3,4,6,8]
+Output: 11
+Explanation: The optimal choice of operations is:
+(1 * gcd(3, 6)) + (2 * gcd(4, 8)) = 3 + 8 = 11
+Example 3:
+Input: nums = [1,2,3,4,5,6]
+Output: 14
+Explanation: The optimal choice of operations is:
+(1 * gcd(1, 5)) + (2 * gcd(2, 4)) + (3 * gcd(3, 6)) = 1 + 4 + 9 = 14
+  Constraints:
+1 <= n <= 7
+nums.length == 2 * n
+1 <= nums[i] <= 106
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/sort-an-array/description/
+Title: 912. Sort an Array
+Difficulty: Medium
+Content:
+Given an array of integers nums, sort the array in ascending order and return it.
+You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
+  Example 1:
+Input: nums = [5,2,3,1]
+Output: [1,2,3,5]
+Explanation: After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed (for example, 1 and 5).
+Example 2:
+Input: nums = [5,1,1,2,0,0]
+Output: [0,0,1,1,2,5]
+Explanation: Note that the values of nums are not necessairly unique.
+  Constraints:
+1 <= nums.length <= 5 * 104
+-5 * 104 <= nums[i] <= 5 * 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
+Title: 297. Serialize and Deserialize Binary Tree
+Difficulty: Hard
+Content:
+Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.
+Clarification: The input/output format is the same as how LeetCode serializes a binary tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.
+  Example 1:
+Input: root = [1,2,3,null,null,4,5]
+Output: [1,2,3,null,null,4,5]
+Example 2:
+Input: root = []
+Output: []
+  Constraints:
+The number of nodes in the tree is in the range [0, 104].
+-1000 <= Node.val <= 1000
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/insert-interval/description/
+Title: 57. Insert Interval
+Difficulty: Medium
+Content:
+You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi] represent the start and the end of the ith interval and intervals is sorted in ascending order by starti. You are also given an interval newInterval = [start, end] that represents the start and end of another interval.
+Insert newInterval into intervals such that intervals is still sorted in ascending order by starti and intervals still does not have any overlapping intervals (merge overlapping intervals if necessary).
+Return intervals after the insertion.
+Note that you don't need to modify intervals in-place. You can make a new array and return it.
+  Example 1:
+Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
+Output: [[1,5],[6,9]]
+Example 2:
+Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
+Output: [[1,2],[3,10],[12,16]]
+Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
+  Constraints:
+0 <= intervals.length <= 104
+intervals[i].length == 2
+0 <= starti <= endi <= 105
+intervals is sorted by starti in ascending order.
+newInterval.length == 2
+0 <= start <= end <= 105
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/reorder-list/description/
+Title: 143. Reorder List
+Difficulty: Medium
+Content:
+You are given the head of a singly linked-list. The list can be represented as:
+L0 → L1 → … → Ln - 1 → Ln
+Reorder the list to be on the following form:
+L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
+You may not modify the values in the list's nodes. Only nodes themselves may be changed.
+  Example 1:
+Input: head = [1,2,3,4]
+Output: [1,4,2,3]
+Example 2:
+Input: head = [1,2,3,4,5]
+Output: [1,5,2,4,3]
+  Constraints:
+The number of nodes in the list is in the range [1, 5 * 104].
+1 <= Node.val <= 1000
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/permutations/description/
+Title: 46. Permutations
+Difficulty: Medium
+Content:
+Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+  Example 1:
+Input: nums = [1,2,3]
+Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+Example 2:
+Input: nums = [0,1]
+Output: [[0,1],[1,0]]
+Example 3:
+Input: nums = [1]
+Output: [[1]]
+  Constraints:
+1 <= nums.length <= 6
+-10 <= nums[i] <= 10
+All the integers of nums are unique.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/n-queens/description/
+Title: 51. N-Queens
+Difficulty: Hard
+Content:
+The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
+Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.
+Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
+  Example 1:
+Input: n = 4
+Output: [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
+Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above
+Example 2:
+Input: n = 1
+Output: [["Q"]]
+  Constraints:
+1 <= n <= 9
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/set-matrix-zeroes/description/
+Title: 73. Set Matrix Zeroes
+Difficulty: Medium
+Content:
+Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+You must do it in place.
+  Example 1:
+Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
+Output: [[1,0,1],[0,0,0],[1,0,1]]
+Example 2:
+Input: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
+  Constraints:
+m == matrix.length
+n == matrix[0].length
+1 <= m, n <= 200
+-231 <= matrix[i][j] <= 231 - 1
+  Follow up:
+A straightforward solution using O(mn) space is probably a bad idea.
+A simple improvement uses O(m + n) space, but still not the best solution.
+Could you devise a constant space solution?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/reconstruct-itinerary/description/
+Title: 332. Reconstruct Itinerary
+Difficulty: Hard
+Content:
+You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it.
+All of the tickets belong to a man who departs from "JFK", thus, the itinerary must begin with "JFK". If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.
+For example, the itinerary ["JFK", "LGA"] has a smaller lexical order than ["JFK", "LGB"].
+You may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.
+  Example 1:
+Input: tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
+Output: ["JFK","MUC","LHR","SFO","SJC"]
+Example 2:
+Input: tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+Output: ["JFK","ATL","JFK","SFO","ATL","SFO"]
+Explanation: Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"] but it is larger in lexical order.
+  Constraints:
+1 <= tickets.length <= 300
+tickets[i].length == 2
+fromi.length == 3
+toi.length == 3
+fromi and toi consist of uppercase English letters.
+fromi != toi
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/maximum-subarray-min-product/description/
+Title: 1856. Maximum Subarray Min-Product
+Difficulty: Medium
+Content:
+The min-product of an array is equal to the minimum value in the array multiplied by the array's sum.
+For example, the array [3,2,5] (minimum value is 2) has a min-product of 2 * (3+2+5) = 2 * 10 = 20.
+Given an array of integers nums, return the maximum min-product of any non-empty subarray of nums. Since the answer may be large, return it modulo 109 + 7.
+Note that the min-product should be maximized before performing the modulo operation. Testcases are generated such that the maximum min-product without modulo will fit in a 64-bit signed integer.
+A subarray is a contiguous part of an array.
+  Example 1:
+Input: nums = [1,2,3,2]
+Output: 14
+Explanation: The maximum min-product is achieved with the subarray [2,3,2] (minimum value is 2).
+2 * (2+3+2) = 2 * 7 = 14.
+Example 2:
+Input: nums = [2,3,3,1,2]
+Output: 18
+Explanation: The maximum min-product is achieved with the subarray [3,3] (minimum value is 3).
+3 * (3+3) = 3 * 6 = 18.
+Example 3:
+Input: nums = [3,1,5,6,4,2]
+Output: 60
+Explanation: The maximum min-product is achieved with the subarray [5,6,4] (minimum value is 4).
+4 * (5+6+4) = 4 * 15 = 60.
+  Constraints:
+1 <= nums.length <= 105
+1 <= nums[i] <= 107
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/time-based-key-value-store/description/
+Title: 981. Time Based Key-Value Store
+Difficulty: Medium
+Content:
+Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key's value at a certain timestamp.
+Implement the TimeMap class:
+TimeMap() Initializes the object of the data structure.
+void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.
+String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev <= timestamp. If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns "".
+  Example 1:
+Input
+["TimeMap", "set", "get", "get", "set", "get", "get"]
+[[], ["foo", "bar", 1], ["foo", 1], ["foo", 3], ["foo", "bar2", 4], ["foo", 4], ["foo", 5]]
+Output
+[null, null, "bar", "bar", null, "bar2", "bar2"]
+
+Explanation
+TimeMap timeMap = new TimeMap();
+timeMap.set("foo", "bar", 1);  // store the key "foo" and value "bar" along with timestamp = 1.
+timeMap.get("foo", 1);         // return "bar"
+timeMap.get("foo", 3);         // return "bar", since there is no value corresponding to foo at timestamp 3 and timestamp 2, then the only value is at timestamp 1 is "bar".
+timeMap.set("foo", "bar2", 4); // store the key "foo" and value "bar2" along with timestamp = 4.
+timeMap.get("foo", 4);         // return "bar2"
+timeMap.get("foo", 5);         // return "bar2"
+  Constraints:
+1 <= key.length, value.length <= 100
+key and value consist of lowercase English letters and digits.
+1 <= timestamp <= 107
+All the timestamps timestamp of set are strictly increasing.
+At most 2 * 105 calls will be made to set and get.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/word-search-ii/description/
+Title: 212. Word Search II
+Difficulty: Hard
+Content:
+Given an m x n board of characters and a list of strings words, return all words on the board.
+Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
+  Example 1:
+Input: board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]
+Output: ["eat","oath"]
+Example 2:
+Input: board = [["a","b"],["c","d"]], words = ["abcb"]
+Output: []
+  Constraints:
+m == board.length
+n == board[i].length
+1 <= m, n <= 12
+board[i][j] is a lowercase English letter.
+1 <= words.length <= 3 * 104
+1 <= words[i].length <= 10
+words[i] consists of lowercase English letters.
+All the strings of words are unique.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/
+Title: 329. Longest Increasing Path in a Matrix
+Difficulty: Hard
+Content:
+Given an m x n integers matrix, return the length of the longest increasing path in matrix.
+From each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).
+  Example 1:
+Input: matrix = [[9,9,4],[6,6,8],[2,1,1]]
+Output: 4
+Explanation: The longest increasing path is [1, 2, 6, 9].
+Example 2:
+Input: matrix = [[3,4,5],[3,2,6],[2,2,1]]
+Output: 4
+Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.
+Example 3:
+Input: matrix = [[1]]
+Output: 1
+  Constraints:
+m == matrix.length
+n == matrix[i].length
+1 <= m, n <= 200
+0 <= matrix[i][j] <= 231 - 1
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/course-schedule/description/
+Title: 207. Course Schedule
+Difficulty: Medium
+Content:
+There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
+For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
+Return true if you can finish all courses. Otherwise, return false.
+  Example 1:
+Input: numCourses = 2, prerequisites = [[1,0]]
+Output: true
+Explanation: There are a total of 2 courses to take. 
+To take course 1 you should have finished course 0. So it is possible.
+Example 2:
+Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
+Output: false
+Explanation: There are a total of 2 courses to take. 
+To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
+  Constraints:
+1 <= numCourses <= 2000
+0 <= prerequisites.length <= 5000
+prerequisites[i].length == 2
+0 <= ai, bi < numCourses
+All the pairs prerequisites[i] are unique.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/minimum-window-substring/description/
+Title: 76. Minimum Window Substring
+Difficulty: Hard
+Content:
+Given two strings s and t of lengths m and n respectively, return the minimum window
+substring
+of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+The testcases will be generated such that the answer is unique.
+  Example 1:
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+Example 2:
+Input: s = "a", t = "a"
+Output: "a"
+Explanation: The entire string s is the minimum window.
+Example 3:
+Input: s = "a", t = "aa"
+Output: ""
+Explanation: Both 'a's from t must be included in the window.
+Since the largest window of s only has one 'a', return empty string.
+  Constraints:
+m == s.length
+n == t.length
+1 <= m, n <= 105
+s and t consist of uppercase and lowercase English letters.
+  Follow up: Could you find an algorithm that runs in O(m + n) time?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/design-linked-list/description/
+Title: 707. Design Linked List
+Difficulty: Medium
+Content:
+Design your implementation of the linked list. You can choose to use a singly or doubly linked list.
+A node in a singly linked list should have two attributes: val and next. val is the value of the current node, and next is a pointer/reference to the next node.
+If you want to use the doubly linked list, you will need one more attribute prev to indicate the previous node in the linked list. Assume all nodes in the linked list are 0-indexed.
+Implement the MyLinkedList class:
+MyLinkedList() Initializes the MyLinkedList object.
+int get(int index) Get the value of the indexth node in the linked list. If the index is invalid, return -1.
+void addAtHead(int val) Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+void addAtTail(int val) Append a node of value val as the last element of the linked list.
+void addAtIndex(int index, int val) Add a node of value val before the indexth node in the linked list. If index equals the length of the linked list, the node will be appended to the end of the linked list. If index is greater than the length, the node will not be inserted.
+void deleteAtIndex(int index) Delete the indexth node in the linked list, if the index is valid.
+  Example 1:
+Input
+["MyLinkedList", "addAtHead", "addAtTail", "addAtIndex", "get", "deleteAtIndex", "get"]
+[[], [1], [3], [1, 2], [1], [1], [1]]
+Output
+[null, null, null, null, 2, null, 3]
+
+Explanation
+MyLinkedList myLinkedList = new MyLinkedList();
+myLinkedList.addAtHead(1);
+myLinkedList.addAtTail(3);
+myLinkedList.addAtIndex(1, 2);    // linked list becomes 1->2->3
+myLinkedList.get(1);              // return 2
+myLinkedList.deleteAtIndex(1);    // now the linked list is 1->3
+myLinkedList.get(1);              // return 3
+  Constraints:
+0 <= index, val <= 1000
+Please do not use the built-in LinkedList library.
+At most 2000 calls will be made to get, addAtHead, addAtTail, addAtIndex and deleteAtIndex.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/description/
+Title: 2002. Maximum Product of the Length of Two Palindromic Subsequences
+Difficulty: Medium
+Content:
+Given a string s, find two disjoint palindromic subsequences of s such that the product of their lengths is maximized. The two subsequences are disjoint if they do not both pick a character at the same index.
+Return the maximum possible product of the lengths of the two palindromic subsequences.
+A subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters. A string is palindromic if it reads the same forward and backward.
+  Example 1:
+Input: s = "leetcodecom"
+Output: 9
+Explanation: An optimal solution is to choose "ete" for the 1st subsequence and "cdc" for the 2nd subsequence.
+The product of their lengths is: 3 * 3 = 9.
+Example 2:
+Input: s = "bb"
+Output: 1
+Explanation: An optimal solution is to choose "b" (the first character) for the 1st subsequence and "b" (the second character) for the 2nd subsequence.
+The product of their lengths is: 1 * 1 = 1.
+Example 3:
+Input: s = "accbcaxxcxx"
+Output: 25
+Explanation: An optimal solution is to choose "accca" for the 1st subsequence and "xxcxx" for the 2nd subsequence.
+The product of their lengths is: 5 * 5 = 25.
+  Constraints:
+2 <= s.length <= 12
+s consists of lowercase English letters only.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/copy-list-with-random-pointer/description/
+Title: 138. Copy List with Random Pointer
+Difficulty: Medium
+Content:
+A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.
+Construct a deep copy of the list. The deep copy should consist of exactly n brand new nodes, where each new node has its value set to the value of its corresponding original node. Both the next and random pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state. None of the pointers in the new list should point to nodes in the original list.
+For example, if there are two nodes X and Y in the original list, where X.random --> Y, then for the corresponding two nodes x and y in the copied list, x.random --> y.
+Return the head of the copied linked list.
+The linked list is represented in the input/output as a list of n nodes. Each node is represented as a pair of [val, random_index] where:
+val: an integer representing Node.val
+random_index: the index of the node (range from 0 to n-1) that the random pointer points to, or null if it does not point to any node.
+Your code will only be given the head of the original linked list.
+  Example 1:
+Input: head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
+Output: [[7,null],[13,0],[11,4],[10,2],[1,0]]
+Example 2:
+Input: head = [[1,1],[2,1]]
+Output: [[1,1],[2,1]]
+Example 3:
+Input: head = [[3,null],[3,0],[3,null]]
+Output: [[3,null],[3,0],[3,null]]
+  Constraints:
+0 <= n <= 1000
+-104 <= Node.val <= 104
+Node.random is null or is pointing to some node in the linked list.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/implement-trie-prefix-tree/description/
+Title: 208. Implement Trie (Prefix Tree)
+Difficulty: Medium
+Content:
+A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.
+Implement the Trie class:
+Trie() Initializes the trie object.
+void insert(String word) Inserts the string word into the trie.
+boolean search(String word) Returns true if the string word is in the trie (i.e., was inserted before), and false otherwise.
+boolean startsWith(String prefix) Returns true if there is a previously inserted string word that has the prefix prefix, and false otherwise.
+  Example 1:
+Input
+["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+[[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+Output
+[null, null, true, false, true, null, true]
+
+Explanation
+Trie trie = new Trie();
+trie.insert("apple");
+trie.search("apple");   // return True
+trie.search("app");     // return False
+trie.startsWith("app"); // return True
+trie.insert("app");
+trie.search("app");     // return True
+  Constraints:
+1 <= word.length, prefix.length <= 2000
+word and prefix consist only of lowercase English letters.
+At most 3 * 104 calls in total will be made to insert, search, and startsWith.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/rotting-oranges/description/
+Title: 994. Rotting Oranges
+Difficulty: Medium
+Content:
+You are given an m x n grid where each cell can have one of three values:
+0 representing an empty cell,
+1 representing a fresh orange, or
+2 representing a rotten orange.
+Every minute, any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten.
+Return the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1.
+  Example 1:
+Input: grid = [[2,1,1],[1,1,0],[0,1,1]]
+Output: 4
+Example 2:
+Input: grid = [[2,1,1],[0,1,1],[1,0,1]]
+Output: -1
+Explanation: The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.
+Example 3:
+Input: grid = [[0,2]]
+Output: 0
+Explanation: Since there are already no fresh oranges at minute 0, the answer is just 0.
+  Constraints:
+m == grid.length
+n == grid[i].length
+1 <= m, n <= 10
+grid[i][j] is 0, 1, or 2.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/pacific-atlantic-water-flow/description/
+Title: 417. Pacific Atlantic Water Flow
+Difficulty: Medium
+Content:
+There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean. The Pacific Ocean touches the island's left and top edges, and the Atlantic Ocean touches the island's right and bottom edges.
+The island is partitioned into a grid of square cells. You are given an m x n integer matrix heights where heights[r][c] represents the height above sea level of the cell at coordinate (r, c).
+The island receives a lot of rain, and the rain water can flow to neighboring cells directly north, south, east, and west if the neighboring cell's height is less than or equal to the current cell's height. Water can flow from any cell adjacent to an ocean into the ocean.
+Return a 2D list of grid coordinates result where result[i] = [ri, ci] denotes that rain water can flow from cell (ri, ci) to both the Pacific and Atlantic oceans.
+  Example 1:
+Input: heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
+Output: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
+Explanation: The following cells can flow to the Pacific and Atlantic oceans, as shown below:
+[0,4]: [0,4] -> Pacific Ocean 
+       [0,4] -> Atlantic Ocean
+[1,3]: [1,3] -> [0,3] -> Pacific Ocean 
+       [1,3] -> [1,4] -> Atlantic Ocean
+[1,4]: [1,4] -> [1,3] -> [0,3] -> Pacific Ocean 
+       [1,4] -> Atlantic Ocean
+[2,2]: [2,2] -> [1,2] -> [0,2] -> Pacific Ocean 
+       [2,2] -> [2,3] -> [2,4] -> Atlantic Ocean
+[3,0]: [3,0] -> Pacific Ocean 
+       [3,0] -> [4,0] -> Atlantic Ocean
+[3,1]: [3,1] -> [3,0] -> Pacific Ocean 
+       [3,1] -> [4,1] -> Atlantic Ocean
+[4,0]: [4,0] -> Pacific Ocean 
+       [4,0] -> Atlantic Ocean
+Note that there are other possible paths for these cells to flow to the Pacific and Atlantic oceans.
+Example 2:
+Input: heights = [[1]]
+Output: [[0,0]]
+Explanation: The water can flow from the only cell to the Pacific and Atlantic oceans.
+  Constraints:
+m == heights.length
+n == heights[r].length
+1 <= m, n <= 200
+0 <= heights[r][c] <= 105
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/merge-intervals/description/
+Title: 56. Merge Intervals
+Difficulty: Medium
+Content:
+Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+  Example 1:
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+Example 2:
+Input: intervals = [[1,4],[4,5]]
+Output: [[1,5]]
+Explanation: Intervals [1,4] and [4,5] are considered overlapping.
+  Constraints:
+1 <= intervals.length <= 104
+intervals[i].length == 2
+0 <= starti <= endi <= 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/binary-tree-right-side-view/description/
+Title: 199. Binary Tree Right Side View
+Difficulty: Medium
+Content:
+Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+  Example 1:
+Input: root = [1,2,3,null,5,null,4]
+Output: [1,3,4]
+Example 2:
+Input: root = [1,null,3]
+Output: [1,3]
+Example 3:
+Input: root = []
+Output: []
+  Constraints:
+The number of nodes in the tree is in the range [0, 100].
+-100 <= Node.val <= 100
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/clone-graph/description/
+Title: 133. Clone Graph
+Difficulty: Medium
+Content:
+Given a reference of a node in a connected undirected graph.
+Return a deep copy (clone) of the graph.
+Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
+class Node {
+    public int val;
+    public List<Node> neighbors;
+}
+  Test case format:
+For simplicity, each node's value is the same as the node's index (1-indexed). For example, the first node with val == 1, the second node with val == 2, and so on. The graph is represented in the test case using an adjacency list.
+An adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph.
+The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph.
+  Example 1:
+Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+Output: [[2,4],[1,3],[2,4],[1,3]]
+Explanation: There are 4 nodes in the graph.
+1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+Example 2:
+Input: adjList = [[]]
+Output: [[]]
+Explanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.
+Example 3:
+Input: adjList = []
+Output: []
+Explanation: This an empty graph, it does not have any nodes.
+  Constraints:
+The number of nodes in the graph is in the range [0, 100].
+1 <= Node.val <= 100
+Node.val is unique for each node.
+There are no repeated edges and no self-loops in the graph.
+The Graph is connected and all nodes can be visited starting from the given node.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/longest-palindromic-substring/description/
+Title: 5. Longest Palindromic Substring
+Difficulty: Medium
+Content:
+Given a string s, return the longest
+palindromic
+substring
+in s.
+  Example 1:
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+Example 2:
+Input: s = "cbbd"
+Output: "bb"
+  Constraints:
+1 <= s.length <= 1000
+s consist of only digits and English letters.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/min-stack/description/
+Title: 155. Min Stack
+Difficulty: Medium
+Content:
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+Implement the MinStack class:
+MinStack() initializes the stack object.
+void push(int val) pushes the element val onto the stack.
+void pop() removes the element on the top of the stack.
+int top() gets the top element of the stack.
+int getMin() retrieves the minimum element in the stack.
+You must implement a solution with O(1) time complexity for each function.
+  Example 1:
+Input
+["MinStack","push","push","push","getMin","pop","top","getMin"]
+[[],[-2],[0],[-3],[],[],[],[]]
+
+Output
+[null,null,null,null,-3,null,0,-2]
+
+Explanation
+MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.getMin(); // return -3
+minStack.pop();
+minStack.top();    // return 0
+minStack.getMin(); // return -2
+  Constraints:
+-231 <= val <= 231 - 1
+Methods pop, top and getMin operations will always be called on non-empty stacks.
+At most 3 * 104 calls will be made to push, pop, top, and getMin.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/sort-list/description/
+Title: 148. Sort List
+Difficulty: Medium
+Content:
+Given the head of a linked list, return the list after sorting it in ascending order.
+  Example 1:
+Input: head = [4,2,1,3]
+Output: [1,2,3,4]
+Example 2:
+Input: head = [-1,5,3,4,0]
+Output: [-1,0,3,4,5]
+Example 3:
+Input: head = []
+Output: []
+  Constraints:
+The number of nodes in the list is in the range [0, 5 * 104].
+-105 <= Node.val <= 105
+  Follow up: Can you sort the linked list in O(n logn) time and O(1) memory (i.e. constant space)?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/word-search/description/
+Title: 79. Word Search
+Difficulty: Medium
+Content:
+Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
+  Example 1:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+Output: true
+Example 2:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
+Output: true
+Example 3:
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
+Output: false
+  Constraints:
+m == board.length
+n = board[i].length
+1 <= m, n <= 6
+1 <= word.length <= 15
+board and word consists of only lowercase and uppercase English letters.
+  Follow up: Could you use search pruning to make your solution faster with a larger board?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/3sum/description/
+Title: 15. 3Sum
+Difficulty: Medium
+Content:
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+Notice that the solution set must not contain duplicate triplets.
+  Example 1:
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+The distinct triplets are [-1,0,1] and [-1,-1,2].
+Notice that the order of the output and the order of the triplets does not matter.
+Example 2:
+Input: nums = [0,1,1]
+Output: []
+Explanation: The only possible triplet does not sum up to 0.
+Example 3:
+Input: nums = [0,0,0]
+Output: [[0,0,0]]
+Explanation: The only possible triplet sums up to 0.
+  Constraints:
+3 <= nums.length <= 3000
+-105 <= nums[i] <= 105
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/kth-largest-element-in-an-array/description/
+Title: 215. Kth Largest Element in an Array
+Difficulty: Medium
+Content:
+Given an integer array nums and an integer k, return the kth largest element in the array.
+Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Can you solve it without sorting?
+  Example 1:
+Input: nums = [3,2,1,5,6,4], k = 2
+Output: 5
+Example 2:
+Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
+Output: 4
+  Constraints:
+1 <= k <= nums.length <= 105
+-104 <= nums[i] <= 104
+--------------------------------------------------------------------------------

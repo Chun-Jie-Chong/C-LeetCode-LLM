@@ -1,0 +1,28 @@
+Analyzing and compiling 212_response.c to 212_response.o
+Compilation and analysis of 212_response.c succeeded
+Analyzing and compiling 297_response.c to 297_response.o
+Compilation and analysis of 297_response.c succeeded
+Analyzing and compiling 332_response.c to 332_response.o
+332_response.c:28:55: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char **result = (char **)malloc((ticketsSize + 1) * sizeof(char *));
+                                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 332_response.c succeeded
+Analyzing and compiling 417_response.c to 417_response.o
+417_response.c:7:19: warning: Array access results in an undefined pointer dereference [core.NullDereference]
+    visited[r][c] = 1;
+    ~~~~~~~~~~~~~~^~~
+417_response.c:18:36: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** pac = (int**)malloc(rows * sizeof(int*));
+                              ~~~~~^~~~~~~~~~~~~~
+417_response.c:19:36: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** atl = (int**)malloc(rows * sizeof(int*));
+                              ~~~~~^~~~~~~~~~~~~~
+417_response.c:34:34: warning: Loss of sign in implicit conversion [alpha.core.Conversion]
+    int** result = (int**)malloc(rows * cols * sizeof(int*));
+                                 ^~~~~~~~~~~
+4 warnings generated.
+Compilation and analysis of 417_response.c succeeded
+Analyzing and compiling 707_response.c to 707_response.o
+Compilation and analysis of 707_response.c succeeded
+Compilation and static analysis completed.

@@ -1,0 +1,143 @@
+Analyzing and compiling 118_response.c to 118_response.o
+118_response.c:5:44: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** triangle = (int**)malloc(numRows * sizeof(int*));
+                                   ~~~~~~~~^~~~~~~~~~~~~~
+118_response.c:6:47: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = (int*)malloc(numRows * sizeof(int));
+                                      ~~~~~~~~^~~~~~~~~~~~~
+118_response.c:10:44: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        triangle[i] = (int*)malloc((i + 1) * sizeof(int));
+                                   ~~~~~~~~^~~~~~~~~~~~~
+3 warnings generated.
+Compilation and analysis of 118_response.c succeeded
+Analyzing and compiling 133_response.c to 133_response.o
+133_response.c:16:58: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    node->neighbors = (struct Node**)malloc(numNeighbors * sizeof(struct Node*));
+                                            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 133_response.c succeeded
+Analyzing and compiling 179_response.c to 179_response.o
+179_response.c:13:46: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char** numStrs = (char**)malloc(numsSize * sizeof(char*));
+                                    ~~~~~~~~~^~~~~~~~~~~~~~~
+179_response.c:22:17: warning: Loss of sign in implicit conversion [alpha.core.Conversion]
+    qsort(nums, numsSize, sizeof(int), compare);
+                ^~~~~~~~
+179_response.c:24:49: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char* result = (char*)malloc((totalLen + 1) * sizeof(char));
+                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+3 warnings generated.
+Compilation and analysis of 179_response.c succeeded
+Analyzing and compiling 212_response.c to 212_response.o
+212_response.c:48:63: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        results[*resultCount] = (char*)malloc((buffIndex + 1) * sizeof(char));
+                                              ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+212_response.c:53:32: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    if (!isSafe(x, y, m, n) || visited[x][y] || !node->children[board[x][y] - 'a']) {
+                               ^~~~~~~~~~
+212_response.c:53:32: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    if (!isSafe(x, y, m, n) || visited[x][y] || !node->children[board[x][y] - 'a']) {
+                               ^~~~~~~~~~~~~
+212_response.c:79:40: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    bool **visited = (bool **)malloc(m * sizeof(bool*));
+                                     ~~^~~~~~~~~~~~~~~
+212_response.c:81:39: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        visited[i] = (bool *)malloc(n * sizeof(bool));
+                                    ~~^~~~~~~~~~~~~~
+5 warnings generated.
+Compilation and analysis of 212_response.c succeeded
+Analyzing and compiling 22_response.c to 22_response.o
+22_response.c:7:58: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        result[*returnSize] = (char *)malloc((2 * n + 1) * sizeof(char));
+                                             ~~~~~~~~~~~~^~~~~~~~~~~~~~
+22_response.c:29:45: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char **result = (char **)malloc(maxSize * sizeof(char *));
+                                    ~~~~~~~~^~~~~~~~~~~~~~~~
+22_response.c:30:48: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char *current = (char *)malloc((2 * n + 1) * sizeof(char));
+                                   ~~~~~~~~~~~~^~~~~~~~~~~~~~
+3 warnings generated.
+Compilation and analysis of 22_response.c succeeded
+Analyzing and compiling 332_response.c to 332_response.o
+332_response.c:35:33: error: no member named 'from' in 'struct Node'
+            if (strcmp(current->from, airport) == 0) {
+                       ~~~~~~~  ^
+1 error generated.
+Compilation and analysis of 332_response.c failed
+Analyzing and compiling 40_response.c to 40_response.o
+40_response.c:11:57: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        results[*resultSize] = (int*)malloc(currentSize * sizeof(int));
+                                            ~~~~~~~~~~~~^~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 40_response.c succeeded
+Analyzing and compiling 417_response.c to 417_response.o
+417_response.c:37:35: warning: Loss of sign in implicit conversion [alpha.core.Conversion]
+    int **result = (int **)malloc(m * n * sizeof(int *));
+                                  ^~~~~
+417_response.c:38:40: warning: Loss of sign in implicit conversion [alpha.core.Conversion]
+    *returnColumnSizes = (int *)malloc(m * n * sizeof(int));
+                                       ^~~~~
+2 warnings generated.
+Compilation and analysis of 417_response.c succeeded
+Analyzing and compiling 589_response.c to 589_response.o
+Compilation and analysis of 589_response.c succeeded
+Analyzing and compiling 673_response.c to 673_response.o
+Compilation and analysis of 673_response.c succeeded
+Analyzing and compiling 739_response.c to 739_response.o
+739_response.c:7:48: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* stack = (int*)malloc(temperaturesSize * sizeof(int));
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 739_response.c succeeded
+Analyzing and compiling 763_response.c to 763_response.o
+763_response.c:15:36: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *result = (int*)malloc(len * sizeof(int));
+                               ~~~~^~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 763_response.c succeeded
+Analyzing and compiling 78_response.c to 78_response.o
+78_response.c:6:51: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    result[*returnSize] = (int*)malloc(subsetSize * sizeof(int));
+                                       ~~~~~~~~~~~^~~~~~~~~~~~~
+78_response.c:21:45: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** result = (int**)malloc(maxSubsets * sizeof(int*));
+                                 ~~~~~~~~~~~^~~~~~~~~~~~~~
+78_response.c:22:50: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = (int*)malloc(maxSubsets * sizeof(int));
+                                      ~~~~~~~~~~~^~~~~~~~~~~~~
+78_response.c:25:41: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* subset = (int*)malloc(numsSize * sizeof(int));
+                               ~~~~~~~~~^~~~~~~~~~~~~
+4 warnings generated.
+Compilation and analysis of 78_response.c succeeded
+Analyzing and compiling 79_response.c to 79_response.o
+Compilation and analysis of 79_response.c succeeded
+Analyzing and compiling 84_response.c to 84_response.o
+Compilation and analysis of 84_response.c succeeded
+Analyzing and compiling 853_response.c to 853_response.o
+853_response.c:14:43: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    Car* cars = (Car*)malloc(positionSize * sizeof(Car));
+                             ~~~~~~~~~~~~~^~~~~~~~~~~~~
+853_response.c:21:17: warning: Loss of sign in implicit conversion [alpha.core.Conversion]
+    qsort(cars, positionSize, sizeof(Car), compare);
+                ^~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 853_response.c succeeded
+Analyzing and compiling 90_response.c to 90_response.o
+90_response.c:9:47: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    result[*resultSize] = malloc(tempListSize * sizeof(int));
+                                 ~~~~~~~~~~~~~^~~~~~~~~~~~~
+90_response.c:27:38: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** result = malloc(maxSubsets * sizeof(int*));
+                          ~~~~~~~~~~~^~~~~~~~~~~~~~
+90_response.c:28:44: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = malloc(maxSubsets * sizeof(int));
+                                ~~~~~~~~~~~^~~~~~~~~~~~~
+90_response.c:29:37: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* tempList = malloc(numsSize * sizeof(int));
+                           ~~~~~~~~~^~~~~~~~~~~~~
+4 warnings generated.
+Compilation and analysis of 90_response.c succeeded
+Analyzing and compiling 912_response.c to 912_response.o
+Compilation and analysis of 912_response.c succeeded
+Compilation and static analysis completed.

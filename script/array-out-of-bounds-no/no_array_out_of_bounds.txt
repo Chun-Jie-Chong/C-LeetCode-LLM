@@ -1,0 +1,279 @@
+URL: https://leetcode.com/problems/valid-sudoku/description/
+Title: 36. Valid Sudoku
+Difficulty: Medium
+Content:
+Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+Each row must contain the digits 1-9 without repetition.
+Each column must contain the digits 1-9 without repetition.
+Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+Note:
+A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+Only the filled cells need to be validated according to the mentioned rules.
+  Example 1:
+Input: board = 
+[["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+Output: true
+Example 2:
+Input: board = 
+[["8","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+Output: false
+Explanation: Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
+  Constraints:
+board.length == 9
+board[i].length == 9
+board[i][j] is a digit 1-9 or '.'.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/search-insert-position/description/
+Title: 35. Search Insert Position
+Difficulty: Easy
+Content:
+Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+You must write an algorithm with O(log n) runtime complexity.
+  Example 1:
+Input: nums = [1,3,5,6], target = 5
+Output: 2
+Example 2:
+Input: nums = [1,3,5,6], target = 2
+Output: 1
+Example 3:
+Input: nums = [1,3,5,6], target = 7
+Output: 4
+  Constraints:
+1 <= nums.length <= 104
+-104 <= nums[i] <= 104
+nums contains distinct values sorted in ascending order.
+-104 <= target <= 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/reverse-nodes-in-k-group/description/
+Title: 25. Reverse Nodes in k-Group
+Difficulty: Hard
+Content:
+Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.
+You may not alter the values in the list's nodes, only nodes themselves may be changed.
+  Example 1:
+Input: head = [1,2,3,4,5], k = 2
+Output: [2,1,4,3,5]
+Example 2:
+Input: head = [1,2,3,4,5], k = 3
+Output: [3,2,1,4,5]
+  Constraints:
+The number of nodes in the list is n.
+1 <= k <= n <= 5000
+0 <= Node.val <= 1000
+  Follow-up: Can you solve the problem in O(1) extra memory space?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
+Title: 28. Find the Index of the First Occurrence in a String
+Difficulty: Easy
+Content:
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+  Example 1:
+Input: haystack = "sadbutsad", needle = "sad"
+Output: 0
+Explanation: "sad" occurs at index 0 and 6.
+The first occurrence is at index 0, so we return 0.
+Example 2:
+Input: haystack = "leetcode", needle = "leeto"
+Output: -1
+Explanation: "leeto" did not occur in "leetcode", so we return -1.
+  Constraints:
+1 <= haystack.length, needle.length <= 104
+haystack and needle consist of only lowercase English characters.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/merge-k-sorted-lists/description/
+Title: 23. Merge k Sorted Lists
+Difficulty: Hard
+Content:
+You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+Merge all the linked-lists into one sorted linked-list and return it.
+  Example 1:
+Input: lists = [[1,4,5],[1,3,4],[2,6]]
+Output: [1,1,2,3,4,4,5,6]
+Explanation: The linked-lists are:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+merging them into one sorted list:
+1->1->2->3->4->4->5->6
+Example 2:
+Input: lists = []
+Output: []
+Example 3:
+Input: lists = [[]]
+Output: []
+  Constraints:
+k == lists.length
+0 <= k <= 104
+0 <= lists[i].length <= 500
+-104 <= lists[i][j] <= 104
+lists[i] is sorted in ascending order.
+The sum of lists[i].length will not exceed 104.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+Title: 26. Remove Duplicates from Sorted Array
+Difficulty: Easy
+Content:
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
+Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
+Return k.
+Custom Judge:
+The judge will test your solution with the following code:
+int[] nums = [...]; // Input array
+int[] expectedNums = [...]; // The expected answer with correct length
+
+int k = removeDuplicates(nums); // Calls your implementation
+
+assert k == expectedNums.length;
+for (int i = 0; i < k; i++) {
+    assert nums[i] == expectedNums[i];
+}
+If all assertions pass, then your solution will be accepted.
+  Example 1:
+Input: nums = [1,1,2]
+Output: 2, nums = [1,2,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+Example 2:
+Input: nums = [0,0,1,1,1,2,2,3,3,4]
+Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+  Constraints:
+1 <= nums.length <= 3 * 104
+-100 <= nums[i] <= 100
+nums is sorted in non-decreasing order.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/remove-element/description/
+Title: 27. Remove Element
+Difficulty: Easy
+Content:
+Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.
+Return k.
+Custom Judge:
+The judge will test your solution with the following code:
+int[] nums = [...]; // Input array
+int val = ...; // Value to remove
+int[] expectedNums = [...]; // The expected answer with correct length.
+                            // It is sorted with no values equaling val.
+
+int k = removeElement(nums, val); // Calls your implementation
+
+assert k == expectedNums.length;
+sort(nums, 0, k); // Sort the first k elements of nums
+for (int i = 0; i < actualLength; i++) {
+    assert nums[i] == expectedNums[i];
+}
+If all assertions pass, then your solution will be accepted.
+  Example 1:
+Input: nums = [3,2,2,3], val = 3
+Output: 2, nums = [2,2,_,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 2.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+Example 2:
+Input: nums = [0,1,2,2,3,0,4,2], val = 2
+Output: 5, nums = [0,1,4,0,3,_,_,_]
+Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
+Note that the five elements can be returned in any order.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+  Constraints:
+0 <= nums.length <= 100
+0 <= nums[i] <= 50
+0 <= val <= 100
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/swap-nodes-in-pairs/description/
+Title: 24. Swap Nodes in Pairs
+Difficulty: Medium
+Content:
+Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
+  Example 1:
+Input: head = [1,2,3,4]
+Output: [2,1,4,3]
+Example 2:
+Input: head = []
+Output: []
+Example 3:
+Input: head = [1]
+Output: [1]
+  Constraints:
+The number of nodes in the list is in the range [0, 100].
+0 <= Node.val <= 100
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/interleaving-string/description/
+Title: 97. Interleaving String
+Difficulty: Medium
+Content:
+Given strings s1, s2, and s3, find whether s3 is formed by an interleaving of s1 and s2.
+An interleaving of two strings s and t is a configuration where s and t are divided into n and m
+substrings
+respectively, such that:
+s = s1 + s2 + ... + sn
+t = t1 + t2 + ... + tm
+|n - m| <= 1
+The interleaving is s1 + t1 + s2 + t2 + s3 + t3 + ... or t1 + s1 + t2 + s2 + t3 + s3 + ...
+Note: a + b is the concatenation of strings a and b.
+  Example 1:
+Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
+Output: true
+Explanation: One way to obtain s3 is:
+Split s1 into s1 = "aa" + "bc" + "c", and s2 into s2 = "dbbc" + "a".
+Interleaving the two splits, we get "aa" + "dbbc" + "bc" + "a" + "c" = "aadbbcbcac".
+Since s3 can be obtained by interleaving s1 and s2, we return true.
+Example 2:
+Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbbaccc"
+Output: false
+Explanation: Notice how it is impossible to interleave s2 with any other string to obtain s3.
+Example 3:
+Input: s1 = "", s2 = "", s3 = ""
+Output: true
+  Constraints:
+0 <= s1.length, s2.length <= 100
+0 <= s3.length <= 200
+s1, s2, and s3 consist of lowercase English letters.
+  Follow up: Could you solve it using only O(s2.length) additional memory space?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+Title: 33. Search in Rotated Sorted Array
+Difficulty: Medium
+Content:
+There is an integer array nums sorted in ascending order (with distinct values).
+Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
+Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
+You must write an algorithm with O(log n) runtime complexity.
+  Example 1:
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+Example 2:
+Input: nums = [4,5,6,7,0,1,2], target = 3
+Output: -1
+Example 3:
+Input: nums = [1], target = 0
+Output: -1
+  Constraints:
+1 <= nums.length <= 5000
+-104 <= nums[i] <= 104
+All values of nums are unique.
+nums is an ascending array that is possibly rotated.
+-104 <= target <= 104
+--------------------------------------------------------------------------------

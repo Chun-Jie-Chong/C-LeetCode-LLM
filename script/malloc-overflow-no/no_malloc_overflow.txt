@@ -1,0 +1,414 @@
+URL: https://leetcode.com/problems/continuous-subarray-sum/description/
+Title: 523. Continuous Subarray Sum
+Difficulty: Medium
+Content:
+Given an integer array nums and an integer k, return true if nums has a good subarray or false otherwise.
+A good subarray is a subarray where:
+its length is at least two, and
+the sum of the elements of the subarray is a multiple of k.
+Note that:
+A subarray is a contiguous part of the array.
+An integer x is a multiple of k if there exists an integer n such that x = n * k. 0 is always a multiple of k.
+  Example 1:
+Input: nums = [23,2,4,6,7], k = 6
+Output: true
+Explanation: [2, 4] is a continuous subarray of size 2 whose elements sum up to 6.
+Example 2:
+Input: nums = [23,2,6,4,7], k = 6
+Output: true
+Explanation: [23, 2, 6, 4, 7] is an continuous subarray of size 5 whose elements sum up to 42.
+42 is a multiple of 6 because 42 = 7 * 6 and 7 is an integer.
+Example 3:
+Input: nums = [23,2,6,4,7], k = 13
+Output: false
+  Constraints:
+1 <= nums.length <= 105
+0 <= nums[i] <= 109
+0 <= sum(nums[i]) <= 231 - 1
+1 <= k <= 231 - 1
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
+Title: 438. Find All Anagrams in a String
+Difficulty: Medium
+Content:
+Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+  Example 1:
+Input: s = "cbaebabacd", p = "abc"
+Output: [0,6]
+Explanation:
+The substring with start index = 0 is "cba", which is an anagram of "abc".
+The substring with start index = 6 is "bac", which is an anagram of "abc".
+Example 2:
+Input: s = "abab", p = "ab"
+Output: [0,1,2]
+Explanation:
+The substring with start index = 0 is "ab", which is an anagram of "ab".
+The substring with start index = 1 is "ba", which is an anagram of "ab".
+The substring with start index = 2 is "ab", which is an anagram of "ab".
+  Constraints:
+1 <= s.length, p.length <= 3 * 104
+s and p consist of lowercase English letters.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/add-two-numbers/description/
+Title: 2. Add Two Numbers
+Difficulty: Medium
+Content:
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+  Example 1:
+Input: l1 = [2,4,3], l2 = [5,6,4]
+Output: [7,0,8]
+Explanation: 342 + 465 = 807.
+Example 2:
+Input: l1 = [0], l2 = [0]
+Output: [0]
+Example 3:
+Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+Output: [8,9,9,9,0,0,0,1]
+  Constraints:
+The number of nodes in each linked list is in the range [1, 100].
+0 <= Node.val <= 9
+It is guaranteed that the list represents a number that does not have leading zeros.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/non-overlapping-intervals/description/
+Title: 435. Non-overlapping Intervals
+Difficulty: Medium
+Content:
+Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
+  Example 1:
+Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
+Output: 1
+Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.
+Example 2:
+Input: intervals = [[1,2],[1,2],[1,2]]
+Output: 2
+Explanation: You need to remove two [1,2] to make the rest of the intervals non-overlapping.
+Example 3:
+Input: intervals = [[1,2],[2,3]]
+Output: 0
+Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
+  Constraints:
+1 <= intervals.length <= 105
+intervals[i].length == 2
+-5 * 104 <= starti < endi <= 5 * 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/description/
+Title: 2002. Maximum Product of the Length of Two Palindromic Subsequences
+Difficulty: Medium
+Content:
+Given a string s, find two disjoint palindromic subsequences of s such that the product of their lengths is maximized. The two subsequences are disjoint if they do not both pick a character at the same index.
+Return the maximum possible product of the lengths of the two palindromic subsequences.
+A subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters. A string is palindromic if it reads the same forward and backward.
+  Example 1:
+Input: s = "leetcodecom"
+Output: 9
+Explanation: An optimal solution is to choose "ete" for the 1st subsequence and "cdc" for the 2nd subsequence.
+The product of their lengths is: 3 * 3 = 9.
+Example 2:
+Input: s = "bb"
+Output: 1
+Explanation: An optimal solution is to choose "b" (the first character) for the 1st subsequence and "b" (the second character) for the 2nd subsequence.
+The product of their lengths is: 1 * 1 = 1.
+Example 3:
+Input: s = "accbcaxxcxx"
+Output: 25
+Explanation: An optimal solution is to choose "accca" for the 1st subsequence and "xxcxx" for the 2nd subsequence.
+The product of their lengths is: 5 * 5 = 25.
+  Constraints:
+2 <= s.length <= 12
+s consists of lowercase English letters only.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/reverse-integer/description/
+Title: 7. Reverse Integer
+Difficulty: Medium
+Content:
+Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+  Example 1:
+Input: x = 123
+Output: 321
+Example 2:
+Input: x = -123
+Output: -321
+Example 3:
+Input: x = 120
+Output: 21
+  Constraints:
+-231 <= x <= 231 - 1
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/longest-repeating-character-replacement/description/
+Title: 424. Longest Repeating Character Replacement
+Difficulty: Medium
+Content:
+You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+Return the length of the longest substring containing the same letter you can get after performing the above operations.
+  Example 1:
+Input: s = "ABAB", k = 2
+Output: 4
+Explanation: Replace the two 'A's with two 'B's or vice versa.
+Example 2:
+Input: s = "AABABBA", k = 1
+Output: 4
+Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+The substring "BBBB" has the longest repeating letters, which is 4.
+There may exists other ways to achieve this answer too.
+  Constraints:
+1 <= s.length <= 105
+s consists of only uppercase English letters.
+0 <= k <= s.length
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/copy-list-with-random-pointer/description/
+Title: 138. Copy List with Random Pointer
+Difficulty: Medium
+Content:
+A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.
+Construct a deep copy of the list. The deep copy should consist of exactly n brand new nodes, where each new node has its value set to the value of its corresponding original node. Both the next and random pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state. None of the pointers in the new list should point to nodes in the original list.
+For example, if there are two nodes X and Y in the original list, where X.random --> Y, then for the corresponding two nodes x and y in the copied list, x.random --> y.
+Return the head of the copied linked list.
+The linked list is represented in the input/output as a list of n nodes. Each node is represented as a pair of [val, random_index] where:
+val: an integer representing Node.val
+random_index: the index of the node (range from 0 to n-1) that the random pointer points to, or null if it does not point to any node.
+Your code will only be given the head of the original linked list.
+  Example 1:
+Input: head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
+Output: [[7,null],[13,0],[11,4],[10,2],[1,0]]
+Example 2:
+Input: head = [[1,1],[2,1]]
+Output: [[1,1],[2,1]]
+Example 3:
+Input: head = [[3,null],[3,0],[3,null]]
+Output: [[3,null],[3,0],[3,null]]
+  Constraints:
+0 <= n <= 1000
+-104 <= Node.val <= 104
+Node.random is null or is pointing to some node in the linked list.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+Title: 3. Longest Substring Without Repeating Characters
+Difficulty: Medium
+Content:
+Given a string s, find the length of the longest
+substring
+without repeating characters.
+  Example 1:
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+Example 2:
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+Example 3:
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+  Constraints:
+0 <= s.length <= 5 * 104
+s consists of English letters, digits, symbols and spaces.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/longest-common-prefix/description/
+Title: 14. Longest Common Prefix
+Difficulty: Easy
+Content:
+Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string "".
+  Example 1:
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+Example 2:
+Input: strs = ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.
+  Constraints:
+1 <= strs.length <= 200
+0 <= strs[i].length <= 200
+strs[i] consists of only lowercase English letters.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/longest-palindromic-substring/description/
+Title: 5. Longest Palindromic Substring
+Difficulty: Medium
+Content:
+Given a string s, return the longest
+palindromic
+substring
+in s.
+  Example 1:
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+Example 2:
+Input: s = "cbbd"
+Output: "bb"
+  Constraints:
+1 <= s.length <= 1000
+s consist of only digits and English letters.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/hand-of-straights/description/
+Title: 846. Hand of Straights
+Difficulty: Medium
+Content:
+Alice has some number of cards and she wants to rearrange the cards into groups so that each group is of size groupSize, and consists of groupSize consecutive cards.
+Given an integer array hand where hand[i] is the value written on the ith card and an integer groupSize, return true if she can rearrange the cards, or false otherwise.
+  Example 1:
+Input: hand = [1,2,3,6,2,3,4,7,8], groupSize = 3
+Output: true
+Explanation: Alice's hand can be rearranged as [1,2,3],[2,3,4],[6,7,8]
+Example 2:
+Input: hand = [1,2,3,4,5], groupSize = 4
+Output: false
+Explanation: Alice's hand can not be rearranged into groups of 4.
+  Constraints:
+1 <= hand.length <= 104
+0 <= hand[i] <= 109
+1 <= groupSize <= hand.length
+  Note: This question is the same as 1296: https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+Title: 4. Median of Two Sorted Arrays
+Difficulty: Hard
+Content:
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+The overall run time complexity should be O(log (m+n)).
+  Example 1:
+Input: nums1 = [1,3], nums2 = [2]
+Output: 2.00000
+Explanation: merged array = [1,2,3] and median is 2.
+Example 2:
+Input: nums1 = [1,2], nums2 = [3,4]
+Output: 2.50000
+Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+  Constraints:
+nums1.length == m
+nums2.length == n
+0 <= m <= 1000
+0 <= n <= 1000
+1 <= m + n <= 2000
+-106 <= nums1[i], nums2[i] <= 106
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/regular-expression-matching/description/
+Title: 10. Regular Expression Matching
+Difficulty: Hard
+Content:
+Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+The matching should cover the entire input string (not partial).
+  Example 1:
+Input: s = "aa", p = "a"
+Output: false
+Explanation: "a" does not match the entire string "aa".
+Example 2:
+Input: s = "aa", p = "a*"
+Output: true
+Explanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
+Example 3:
+Input: s = "ab", p = ".*"
+Output: true
+Explanation: ".*" means "zero or more (*) of any character (.)".
+  Constraints:
+1 <= s.length <= 20
+1 <= p.length <= 20
+s contains only lowercase English letters.
+p contains only lowercase English letters, '.', and '*'.
+It is guaranteed for each appearance of the character '*', there will be a previous valid character to match.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/palindrome-number/description/
+Title: 9. Palindrome Number
+Difficulty: Easy
+Content:
+Given an integer x, return true if x is a
+palindrome
+, and false otherwise.
+  Example 1:
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+Example 2:
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+Example 3:
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+  Constraints:
+-231 <= x <= 231 - 1
+  Follow up: Could you solve it without converting the integer to a string?
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/container-with-most-water/description/
+Title: 11. Container With Most Water
+Difficulty: Medium
+Content:
+You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+Return the maximum amount of water a container can store.
+Notice that you may not slant the container.
+  Example 1:
+Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+Example 2:
+Input: height = [1,1]
+Output: 1
+  Constraints:
+n == height.length
+2 <= n <= 105
+0 <= height[i] <= 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/3sum/description/
+Title: 15. 3Sum
+Difficulty: Medium
+Content:
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+Notice that the solution set must not contain duplicate triplets.
+  Example 1:
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+The distinct triplets are [-1,0,1] and [-1,-1,2].
+Notice that the order of the output and the order of the triplets does not matter.
+Example 2:
+Input: nums = [0,1,1]
+Output: []
+Explanation: The only possible triplet does not sum up to 0.
+Example 3:
+Input: nums = [0,0,0]
+Output: [[0,0,0]]
+Explanation: The only possible triplet sums up to 0.
+  Constraints:
+3 <= nums.length <= 3000
+-105 <= nums[i] <= 105
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/distinct-subsequences/description/
+Title: 115. Distinct Subsequences
+Difficulty: Hard
+Content:
+Given two strings s and t, return the number of distinct subsequences of s which equals t.
+The test cases are generated so that the answer fits on a 32-bit signed integer.
+  Example 1:
+Input: s = "rabbbit", t = "rabbit"
+Output: 3
+Explanation:
+As shown below, there are 3 ways you can generate "rabbit" from s.
+rabbbit
+rabbbit
+rabbbit
+Example 2:
+Input: s = "babgbag", t = "bag"
+Output: 5
+Explanation:
+As shown below, there are 5 ways you can generate "bag" from s.
+babgbag
+babgbag
+babgbag
+babgbag
+babgbag
+  Constraints:
+1 <= s.length, t.length <= 1000
+s and t consist of English letters.
+--------------------------------------------------------------------------------

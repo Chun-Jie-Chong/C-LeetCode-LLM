@@ -1,0 +1,58 @@
+Analyzing and compiling 0002_response.c to 0002_response.o
+0002_response.c:35:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+    return dummy.next;
+    ^~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 0002_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0003_response.c to 0003_response.o
+Compilation and analysis of 0003_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0004_response.c to 0004_response.o
+Compilation and analysis of 0004_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0005_response.c to 0005_response.o
+Compilation and analysis of 0005_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0007_response.c to 0007_response.o
+Compilation and analysis of 0007_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0009_response.c to 0009_response.o
+Compilation and analysis of 0009_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0010_response.c to 0010_response.o
+Compilation and analysis of 0010_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0011_response.c to 0011_response.o
+Compilation and analysis of 0011_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0014_response.c to 0014_response.o
+Compilation and analysis of 0014_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0015_response.c to 0015_response.o
+Compilation and analysis of 0015_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0115_response.c to 0115_response.o
+Compilation and analysis of 0115_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0138_response.c to 0138_response.o
+Compilation and analysis of 0138_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0424_response.c to 0424_response.o
+Compilation and analysis of 0424_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0435_response.c to 0435_response.o
+Compilation and analysis of 0435_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0438_response.c to 0438_response.o
+Compilation and analysis of 0438_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0523_response.c to 0523_response.o
+Compilation and analysis of 0523_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0846_response.c to 0846_response.o
+Compilation and analysis of 0846_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 2002_response.c to 2002_response.o
+Compilation and analysis of 2002_response.c succeeded
+----------------------------------------------------------------------------------------------------

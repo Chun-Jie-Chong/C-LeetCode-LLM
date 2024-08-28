@@ -1,0 +1,225 @@
+Analyzing and compiling 0004_response.c to 0004_response.o
+Compilation and analysis of 0004_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0015_response.c to 0015_response.o
+Compilation and analysis of 0015_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0022_response.c to 0022_response.o
+0022_response.c:7:60: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        result[*returnSize] = (char *)malloc((2 * max + 1) * sizeof(char));
+                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+0022_response.c:15:38: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+        current[strlen(current) + 1] = '\0';
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+0022_response.c:30:48: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char *current = (char *)malloc((2 * n + 1) * sizeof(char));
+                                   ~~~~~~~~~~~~^~~~~~~~~~~~~~
+3 warnings generated.
+Compilation and analysis of 0022_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0039_response.c to 0039_response.o
+0039_response.c:7:56: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        result[*returnSize] = (int*)malloc(sizeof(int) * bufferSize);
+                                           ~~~~~~~~~~~~^~~~~~~~~~~~
+0039_response.c:26:47: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** result = (int**)malloc(sizeof(int*) * maxSize);
+                                 ~~~~~~~~~~~~~^~~~~~~~~
+0039_response.c:27:51: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = (int*)malloc(sizeof(int) * maxSize);
+                                      ~~~~~~~~~~~~^~~~~~~~~
+0039_response.c:28:44: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* buffer = (int*)malloc(sizeof(int) * (target + 1));
+                               ~~~~~~~~~~~~^~~~~~~~~~~~~~
+4 warnings generated.
+Compilation and analysis of 0039_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0040_response.c to 0040_response.o
+0040_response.c:6:57: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        results[*returnSize] = (int*)malloc(sizeof(int) * index);
+                                            ~~~~~~~~~~~~^~~~~~~
+0040_response.c:35:45: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* current = (int*)malloc(sizeof(int) * candidatesSize);
+                                ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+0040_response.c:38:5: warning: Potential leak of memory pointed to by 'columnSizes' [unix.Malloc]
+    return results;
+    ^~~~~~~~~~~~~~
+0040_response.c:38:5: warning: Potential leak of memory pointed to by 'current' [unix.Malloc]
+    return results;
+    ^~~~~~~~~~~~~~
+4 warnings generated.
+Compilation and analysis of 0040_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0048_response.c to 0048_response.o
+Compilation and analysis of 0048_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0051_response.c to 0051_response.o
+0051_response.c:12:29: error: function definition is not allowed here
+    void backtrack(int row) {
+                            ^
+0051_response.c:40:5: error: call to undeclared function 'backtrack'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    backtrack(0);
+    ^
+2 errors generated.
+Compilation and analysis of 0051_response.c failed
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0054_response.c to 0054_response.o
+Compilation and analysis of 0054_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0057_response.c to 0057_response.o
+0057_response.c:12:44: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** result = (int**)malloc(totalSize * sizeof(int*));
+                                 ~~~~~~~~~~^~~~~~~~~~~~~~
+0057_response.c:13:49: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = (int*)malloc(totalSize * sizeof(int));
+                                      ~~~~~~~~~~^~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 0057_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0078_response.c to 0078_response.o
+0078_response.c:4:45: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    result[*returnSize] = malloc(subsetSize * sizeof(int));
+                                 ~~~~~~~~~~~^~~~~~~~~~~~~
+0078_response.c:19:35: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int **result = malloc(maxSize * sizeof(int*));
+                          ~~~~~~~~^~~~~~~~~~~~~~
+0078_response.c:20:41: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = malloc(maxSize * sizeof(int));
+                                ~~~~~~~~^~~~~~~~~~~~~
+0078_response.c:22:35: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *subset = malloc(numsSize * sizeof(int));
+                         ~~~~~~~~~^~~~~~~~~~~~~
+4 warnings generated.
+Compilation and analysis of 0078_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0079_response.c to 0079_response.o
+0079_response.c:20:50: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    bool** visited = (bool**)malloc(boardRowSize * sizeof(bool*));
+                                    ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 0079_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0084_response.c to 0084_response.o
+0084_response.c:5:44: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *stack = (int *)malloc(sizeof(int) * (heightsSize + 1));
+                               ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 0084_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0090_response.c to 0090_response.o
+0090_response.c:5:53: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    result[*returnSize] = (int*)malloc(tempListSize * sizeof(int));
+                                       ~~~~~~~~~~~~~^~~~~~~~~~~~~
+0090_response.c:28:50: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** result = (int**)malloc(maxCombinations * sizeof(int*));
+                                 ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+0090_response.c:29:55: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = (int*)malloc(maxCombinations * sizeof(int));
+                                      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+0090_response.c:30:43: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* tempList = (int*)malloc(numsSize * sizeof(int));
+                                 ~~~~~~~~~^~~~~~~~~~~~~
+4 warnings generated.
+Compilation and analysis of 0090_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0118_response.c to 0118_response.o
+0118_response.c:6:43: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** result = (int**) malloc(numRows * sizeof(int*));
+                                  ~~~~~~~~^~~~~~~~~~~~~~
+0118_response.c:7:48: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = (int*) malloc(numRows * sizeof(int));
+                                       ~~~~~~~~^~~~~~~~~~~~~
+0118_response.c:10:43: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        result[i] = (int*) malloc((i + 1) * sizeof(int));
+                                  ~~~~~~~~^~~~~~~~~~~~~
+3 warnings generated.
+Compilation and analysis of 0118_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0120_response.c to 0120_response.o
+Compilation and analysis of 0120_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0213_response.c to 0213_response.o
+Compilation and analysis of 0213_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0309_response.c to 0309_response.o
+Compilation and analysis of 0309_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0332_response.c to 0332_response.o
+0332_response.c:15:45: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    stack->items = (char **)malloc(capacity * sizeof(char *));
+                                   ~~~~~~~~~^~~~~~~~~~~~~~~~
+0332_response.c:32:12: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    while (adjSize[stack->top + 1] > 0) {
+           ^~~~~~~~~~~~~~~~~~~~~~~
+0332_response.c:41:58: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char **itinerary = (char **)malloc((ticketsSize + 1) * sizeof(char *));
+                                       ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+0332_response.c:48:54: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char ***adj = (char ***)malloc((ticketsSize * 2) * sizeof(char **));
+                                   ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+0332_response.c:52:46: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        adj[i] = (char **)malloc(ticketsSize * sizeof(char *));
+                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+5 warnings generated.
+Compilation and analysis of 0332_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0417_response.c to 0417_response.o
+0417_response.c:18:48: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    bool** pacificReachable = (bool**)malloc(m * sizeof(bool*));
+                                             ~~^~~~~~~~~~~~~~~
+0417_response.c:19:49: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    bool** atlanticReachable = (bool**)malloc(m * sizeof(bool*));
+                                              ~~^~~~~~~~~~~~~~~
+0417_response.c:63:23: warning: Array access results in an undefined pointer dereference [core.NullDereference]
+    visited[row][col] = true;
+    ~~~~~~~~~~~~~~~~~~^~~~~~
+3 warnings generated.
+Compilation and analysis of 0417_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0463_response.c to 0463_response.o
+Compilation and analysis of 0463_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0837_response.c to 0837_response.o
+Compilation and analysis of 0837_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0973_response.c to 0973_response.o
+0973_response.c:15:37: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int** result = (int **)malloc(K * sizeof(int *));
+                                  ~~^~~~~~~~~~~~~~~
+0973_response.c:16:42: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    *returnColumnSizes = (int *)malloc(K * sizeof(int));
+                                       ~~^~~~~~~~~~~~~
+2 warnings generated.
+Compilation and analysis of 0973_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0980_response.c to 0980_response.o
+0980_response.c:31:5: warning: 4th function call argument is an uninitialized value [core.CallAndMessage]
+    dfs(grid, gridSize, gridColSize, startX, startY, zeroCount, &pathCount);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 0980_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0994_response.c to 0994_response.o
+Compilation and analysis of 0994_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 1189_response.c to 1189_response.o
+Compilation and analysis of 1189_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 1299_response.c to 1299_response.o
+1299_response.c:6:40: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int* result = (int*)malloc(arrSize * sizeof(int));
+                               ~~~~~~~~^~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 1299_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 1406_response.c to 1406_response.o
+Compilation and analysis of 1406_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 1899_response.c to 1899_response.o
+Compilation and analysis of 1899_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 1905_response.c to 1905_response.o
+Compilation and analysis of 1905_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 2140_response.c to 2140_response.o
+Compilation and analysis of 2140_response.c succeeded
+----------------------------------------------------------------------------------------------------

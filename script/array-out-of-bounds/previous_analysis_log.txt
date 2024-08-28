@@ -1,0 +1,109 @@
+Analyzing and compiling 0067_response.c to 0067_response.o
+0067_response.c:9:25: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+    result[max_len + 1] = '\0';
+    ~~~~~~~~~~~~~~~~~~~~^~~~~~
+1 warning generated.
+Compilation and analysis of 0067_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0150_response.c to 0150_response.o
+0150_response.c:14:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int b = stack[top--];
+                    ^~~~~~~~~~~~
+0150_response.c:15:21: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            int a = stack[top--];
+                    ^~~~~~~~~~~~
+0150_response.c:25:12: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    return stack[top];
+           ^~~~~~~~~~
+3 warnings generated.
+Compilation and analysis of 0150_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0215_response.c to 0215_response.o
+0215_response.c:11:17: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    int pivot = nums[right];
+                ^~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 0215_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0279_response.c to 0279_response.o
+0279_response.c:6:37: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *dp = (int *)malloc((n + 1) * sizeof(int));
+                            ~~~~~~~~^~~~~~~~~~~~~
+0279_response.c:18:18: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+    int result = dp[n];
+                 ^~~~~
+2 warnings generated.
+Compilation and analysis of 0279_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0297_response.c to 0297_response.o
+0297_response.c:49:9: warning: Out of bound memory access (accessed memory precedes memory block) [alpha.security.ArrayBoundV2]
+    if (result[strlen(result)-1] == ',') {
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+0297_response.c:82:37: warning: 1st function call argument is an uninitialized value [core.CallAndMessage]
+    struct TreeNode* root = newNode(atoi(tokens[0]));
+                                    ^~~~~~~~~~~~~~~
+0297_response.c:88:9: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+        struct TreeNode* parent = queue[front++];
+        ^~~~~~~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~
+3 warnings generated.
+Compilation and analysis of 0297_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0332_response.c to 0332_response.o
+0332_response.c:15:45: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    stack->items = (char **)malloc(capacity * sizeof(char *));
+                                   ~~~~~~~~~^~~~~~~~~~~~~~~~
+0332_response.c:32:12: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    while (adjSize[stack->top + 1] > 0) {
+           ^~~~~~~~~~~~~~~~~~~~~~~
+0332_response.c:41:58: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char **itinerary = (char **)malloc((ticketsSize + 1) * sizeof(char *));
+                                       ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+0332_response.c:48:54: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    char ***adj = (char ***)malloc((ticketsSize * 2) * sizeof(char **));
+                                   ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+0332_response.c:52:46: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+        adj[i] = (char **)malloc(ticketsSize * sizeof(char *));
+                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+5 warnings generated.
+Compilation and analysis of 0332_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0682_response.c to 0682_response.o
+0682_response.c:5:44: warning: the computation of the size of the memory allocation may overflow [alpha.security.MallocOverflow]
+    int *stack = (int *)malloc(sizeof(int) * opsSize);
+                               ~~~~~~~~~~~~^~~~~~~~~
+0682_response.c:11:20: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            sum -= stack[top--];
+                   ^~~~~~~~~~~~
+0682_response.c:13:32: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            stack[++top] = 2 * stack[top];
+                               ^~~~~~~~~~
+0682_response.c:16:28: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            stack[++top] = stack[top] + stack[top - 1];
+                           ^~~~~~~~~~
+0682_response.c:16:41: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+            stack[++top] = stack[top] + stack[top - 1];
+                                        ^~~~~~~~~~~~~~
+5 warnings generated.
+Compilation and analysis of 0682_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0691_response.c to 0691_response.o
+0691_response.c:38:12: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    return dp[(1 << targetLen) - 1];
+           ^~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 0691_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 0740_response.c to 0740_response.o
+0740_response.c:25:13: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+    dp[1] = sum[1];
+            ^~~~~~
+1 warning generated.
+Compilation and analysis of 0740_response.c succeeded
+----------------------------------------------------------------------------------------------------
+Analyzing and compiling 1799_response.c to 1799_response.o
+1799_response.c:35:36: warning: Access out-of-bound array element (buffer overflow) [alpha.security.ArrayBound]
+                dp[newMask] = fmax(dp[newMask], dp[mask] + step * gcd(nums[i], nums[j]));
+                                   ^~~~~~~~~~~
+1 warning generated.
+Compilation and analysis of 1799_response.c succeeded
+----------------------------------------------------------------------------------------------------

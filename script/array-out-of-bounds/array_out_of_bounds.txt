@@ -1,0 +1,261 @@
+URL: https://leetcode.com/problems/maximize-score-after-n-operations/description/
+Title: 1799. Maximize Score After N Operations
+Difficulty: Hard
+Content:
+You are given nums, an array of positive integers of size 2 * n. You must perform n operations on this array.
+In the ith operation (1-indexed), you will:
+Choose two elements, x and y.
+Receive a score of i * gcd(x, y).
+Remove x and y from nums.
+Return the maximum score you can receive after performing n operations.
+The function gcd(x, y) is the greatest common divisor of x and y.
+  Example 1:
+Input: nums = [1,2]
+Output: 1
+Explanation: The optimal choice of operations is:
+(1 * gcd(1, 2)) = 1
+Example 2:
+Input: nums = [3,4,6,8]
+Output: 11
+Explanation: The optimal choice of operations is:
+(1 * gcd(3, 6)) + (2 * gcd(4, 8)) = 3 + 8 = 11
+Example 3:
+Input: nums = [1,2,3,4,5,6]
+Output: 14
+Explanation: The optimal choice of operations is:
+(1 * gcd(1, 5)) + (2 * gcd(2, 4)) + (3 * gcd(3, 6)) = 1 + 4 + 9 = 14
+  Constraints:
+1 <= n <= 7
+nums.length == 2 * n
+1 <= nums[i] <= 106
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
+Title: 297. Serialize and Deserialize Binary Tree
+Difficulty: Hard
+Content:
+Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.
+Clarification: The input/output format is the same as how LeetCode serializes a binary tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.
+  Example 1:
+Input: root = [1,2,3,null,null,4,5]
+Output: [1,2,3,null,null,4,5]
+Example 2:
+Input: root = []
+Output: []
+  Constraints:
+The number of nodes in the tree is in the range [0, 104].
+-1000 <= Node.val <= 1000
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/stickers-to-spell-word/description/
+Title: 691. Stickers to Spell Word
+Difficulty: Hard
+Content:
+We are given n different types of stickers. Each sticker has a lowercase English word on it.
+You would like to spell out the given string target by cutting individual letters from your collection of stickers and rearranging them. You can use each sticker more than once if you want, and you have infinite quantities of each sticker.
+Return the minimum number of stickers that you need to spell out target. If the task is impossible, return -1.
+Note: In all test cases, all words were chosen randomly from the 1000 most common US English words, and target was chosen as a concatenation of two random words.
+  Example 1:
+Input: stickers = ["with","example","science"], target = "thehat"
+Output: 3
+Explanation:
+We can use 2 "with" stickers, and 1 "example" sticker.
+After cutting and rearrange the letters of those stickers, we can form the target "thehat".
+Also, this is the minimum number of stickers necessary to form the target string.
+Example 2:
+Input: stickers = ["notice","possible"], target = "basicbasic"
+Output: -1
+Explanation:
+We cannot form the target "basicbasic" from cutting letters from the given stickers.
+  Constraints:
+n == stickers.length
+1 <= n <= 50
+1 <= stickers[i].length <= 10
+1 <= target.length <= 15
+stickers[i] and target consist of lowercase English letters.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/add-binary/description/
+Title: 67. Add Binary
+Difficulty: Easy
+Content:
+Given two binary strings a and b, return their sum as a binary string.
+  Example 1:
+Input: a = "11", b = "1"
+Output: "100"
+Example 2:
+Input: a = "1010", b = "1011"
+Output: "10101"
+  Constraints:
+1 <= a.length, b.length <= 104
+a and b consist only of '0' or '1' characters.
+Each string does not contain leading zeros except for the zero itself.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/reconstruct-itinerary/description/
+Title: 332. Reconstruct Itinerary
+Difficulty: Hard
+Content:
+You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it.
+All of the tickets belong to a man who departs from "JFK", thus, the itinerary must begin with "JFK". If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.
+For example, the itinerary ["JFK", "LGA"] has a smaller lexical order than ["JFK", "LGB"].
+You may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.
+  Example 1:
+Input: tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
+Output: ["JFK","MUC","LHR","SFO","SJC"]
+Example 2:
+Input: tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+Output: ["JFK","ATL","JFK","SFO","ATL","SFO"]
+Explanation: Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"] but it is larger in lexical order.
+  Constraints:
+1 <= tickets.length <= 300
+tickets[i].length == 2
+fromi.length == 3
+toi.length == 3
+fromi and toi consist of uppercase English letters.
+fromi != toi
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/delete-and-earn/description/
+Title: 740. Delete and Earn
+Difficulty: Medium
+Content:
+You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times:
+Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1.
+Return the maximum number of points you can earn by applying the above operation some number of times.
+  Example 1:
+Input: nums = [3,4,2]
+Output: 6
+Explanation: You can perform the following operations:
+- Delete 4 to earn 4 points. Consequently, 3 is also deleted. nums = [2].
+- Delete 2 to earn 2 points. nums = [].
+You earn a total of 6 points.
+Example 2:
+Input: nums = [2,2,3,3,3,4]
+Output: 9
+Explanation: You can perform the following operations:
+- Delete a 3 to earn 3 points. All 2's and 4's are also deleted. nums = [3,3].
+- Delete a 3 again to earn 3 points. nums = [3].
+- Delete a 3 once more to earn 3 points. nums = [].
+You earn a total of 9 points.
+  Constraints:
+1 <= nums.length <= 2 * 104
+1 <= nums[i] <= 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/baseball-game/description/
+Title: 682. Baseball Game
+Difficulty: Easy
+Content:
+You are keeping the scores for a baseball game with strange rules. At the beginning of the game, you start with an empty record.
+You are given a list of strings operations, where operations[i] is the ith operation you must apply to the record and is one of the following:
+An integer x.
+Record a new score of x.
+'+'.
+Record a new score that is the sum of the previous two scores.
+'D'.
+Record a new score that is the double of the previous score.
+'C'.
+Invalidate the previous score, removing it from the record.
+Return the sum of all the scores on the record after applying all the operations.
+The test cases are generated such that the answer and all intermediate calculations fit in a 32-bit integer and that all operations are valid.
+  Example 1:
+Input: ops = ["5","2","C","D","+"]
+Output: 30
+Explanation:
+"5" - Add 5 to the record, record is now [5].
+"2" - Add 2 to the record, record is now [5, 2].
+"C" - Invalidate and remove the previous score, record is now [5].
+"D" - Add 2 * 5 = 10 to the record, record is now [5, 10].
+"+" - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].
+The total sum is 5 + 10 + 15 = 30.
+Example 2:
+Input: ops = ["5","-2","4","C","D","9","+","+"]
+Output: 27
+Explanation:
+"5" - Add 5 to the record, record is now [5].
+"-2" - Add -2 to the record, record is now [5, -2].
+"4" - Add 4 to the record, record is now [5, -2, 4].
+"C" - Invalidate and remove the previous score, record is now [5, -2].
+"D" - Add 2 * -2 = -4 to the record, record is now [5, -2, -4].
+"9" - Add 9 to the record, record is now [5, -2, -4, 9].
+"+" - Add -4 + 9 = 5 to the record, record is now [5, -2, -4, 9, 5].
+"+" - Add 9 + 5 = 14 to the record, record is now [5, -2, -4, 9, 5, 14].
+The total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.
+Example 3:
+Input: ops = ["1","C"]
+Output: 0
+Explanation:
+"1" - Add 1 to the record, record is now [1].
+"C" - Invalidate and remove the previous score, record is now [].
+Since the record is empty, the total sum is 0.
+  Constraints:
+1 <= operations.length <= 1000
+operations[i] is "C", "D", "+", or a string representing an integer in the range [-3 * 104, 3 * 104].
+For operation "+", there will always be at least two previous scores on the record.
+For operations "C" and "D", there will always be at least one previous score on the record.
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/perfect-squares/description/
+Title: 279. Perfect Squares
+Difficulty: Medium
+Content:
+Given an integer n, return the least number of perfect square numbers that sum to n.
+A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.
+  Example 1:
+Input: n = 12
+Output: 3
+Explanation: 12 = 4 + 4 + 4.
+Example 2:
+Input: n = 13
+Output: 2
+Explanation: 13 = 4 + 9.
+  Constraints:
+1 <= n <= 104
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/evaluate-reverse-polish-notation/description/
+Title: 150. Evaluate Reverse Polish Notation
+Difficulty: Medium
+Content:
+You are given an array of strings tokens that represents an arithmetic expression in a Reverse Polish Notation.
+Evaluate the expression. Return an integer that represents the value of the expression.
+Note that:
+The valid operators are '+', '-', '*', and '/'.
+Each operand may be an integer or another expression.
+The division between two integers always truncates toward zero.
+There will not be any division by zero.
+The input represents a valid arithmetic expression in a reverse polish notation.
+The answer and all the intermediate calculations can be represented in a 32-bit integer.
+  Example 1:
+Input: tokens = ["2","1","+","3","*"]
+Output: 9
+Explanation: ((2 + 1) * 3) = 9
+Example 2:
+Input: tokens = ["4","13","5","/","+"]
+Output: 6
+Explanation: (4 + (13 / 5)) = 6
+Example 3:
+Input: tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
+Output: 22
+Explanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
+= ((10 * (6 / (12 * -11))) + 17) + 5
+= ((10 * (6 / -132)) + 17) + 5
+= ((10 * 0) + 17) + 5
+= (0 + 17) + 5
+= 17 + 5
+= 22
+  Constraints:
+1 <= tokens.length <= 104
+tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].
+--------------------------------------------------------------------------------
+URL: https://leetcode.com/problems/kth-largest-element-in-an-array/description/
+Title: 215. Kth Largest Element in an Array
+Difficulty: Medium
+Content:
+Given an integer array nums and an integer k, return the kth largest element in the array.
+Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Can you solve it without sorting?
+  Example 1:
+Input: nums = [3,2,1,5,6,4], k = 2
+Output: 5
+Example 2:
+Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
+Output: 4
+  Constraints:
+1 <= k <= nums.length <= 105
+-104 <= nums[i] <= 104
+--------------------------------------------------------------------------------

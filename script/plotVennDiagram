@@ -1,0 +1,35 @@
+import matplotlib.pyplot as plt
+from matplotlib_venn import venn2
+
+# Set sizes for the two sets and the intersection
+# Line Length Loop Testing
+# old_files = 19
+# new_files = 20
+# overlap = 15
+
+# LOC Loop Testing
+# old_files = 24
+# new_files = 14
+# overlap = 10
+
+# Malloc Overflow Loop Testing
+# old_files = 26
+# new_files = 12
+# overlap = 15
+
+# Array Index Out Of Bounds Loop Testing
+# old_files = 12
+# new_files = 5
+# overlap = 10
+
+# Null Dereference Loop Testing
+old_files = 3
+new_files = 1
+overlap = 2
+
+# Create the Venn diagram
+venn = venn2(subsets=(old_files, new_files, overlap), set_labels=('# of Old Files', '# of New Files'))
+
+# Display the diagram
+plt.title("Loop Testing (Null Dereference)")
+plt.show()
