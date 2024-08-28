@@ -7,7 +7,7 @@ ANALYZE_FLAGS="--analyze -Xanalyzer -analyzer-checker=alpha.core -Xanalyzer -ana
 LOGFILE="compile_and_analyze_log.txt"
 
 # Iterate over all .c files in the current directory
-cd ../code
+cd new_loc/after
 
 # Create or clear the log file
 > "$LOGFILE"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory to change into
-target_directory="../code"
+target_directory="new_loc/after"
 
 # Change to the target directory
 cd "$target_directory" || { echo "Failed to change directory to $target_directory"; exit 1; }

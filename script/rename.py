@@ -21,5 +21,5 @@ def process_files(directory):
             print(f"Renamed: {filename} -> {new_filename}")
 
 # Example usage
-directory_path = '../code'
+directory_path = 'new_loc/after'
 process_files(directory_path)

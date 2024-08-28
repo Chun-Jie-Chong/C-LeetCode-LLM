@@ -7,7 +7,7 @@ struct ListNode {
 };
 
 // Iterative solution
-struct ListNode* reverseListIterative(struct ListNode* head) {
+struct ListNode* reverseList(struct ListNode* head) {
     struct ListNode *prev = NULL;
     struct ListNode *current = head;
     struct ListNode *next = NULL;
@@ -20,13 +20,13 @@ struct ListNode* reverseListIterative(struct ListNode* head) {
     return prev;
 }
 
-// Recursive solution
-struct ListNode* reverseListRecursive(struct ListNode* head) {
-    if (head == NULL || head->next == NULL) {
-        return head;
-    }
-    struct ListNode* reversedList = reverseListRecursive(head->next);
-    head->next->next = head;
-    head->next = NULL;
-    return reversedList;
-}
+// // Recursive solution
+// struct ListNode* reverseListRecursive(struct ListNode* head) {
+//     if (head == NULL || head->next == NULL) {
+//         return head;
+//     }
+//     struct ListNode* reversedList = reverseListRecursive(head->next);
+//     head->next->next = head;
+//     head->next = NULL;
+//     return reversedList;
+// }

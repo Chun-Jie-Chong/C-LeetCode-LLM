@@ -8,7 +8,7 @@ def ask_chatgpt(prompt):
         model="gpt-4o",
         messages=[
             {"role": "system", "content": "You are an expert in solving leetcode questions."},
-            {"role": "user", "content": f"Below is a leetcode question. Please provide a solution in C programming language. Provide only the functional implementation. Do not include any explanation. Include any necessary headers for the code to work.\n {prompt}"}
+            {"role": "user", "content": f"Below is a leetcode question. Please provide a solution in C programming language. Provide only the functional implementation. Do not include any explanation. Include any necessary headers for the code to work. Make sure to generate fewer lines of code for the solution for easier understanding \n {prompt}"}
         ]
     )
     return response.choices[0].message.content
@@ -32,7 +32,7 @@ def read_questions_from_file(file_path):
     questions = dict(zip(titles, prompts))
     return questions
 
-file_path = "leetcode_questions_output.txt"
+file_path = "new_loc/loc.txt"
 questions = read_questions_from_file(file_path)
 # ask chatgpt for a response for each leet code question (prompt)
 for question in questions:

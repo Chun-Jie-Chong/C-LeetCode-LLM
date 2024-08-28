@@ -27,8 +27,8 @@ def write_results_to_file(results, output_file):
             f.write(line + '\n')
 
 if __name__ == "__main__":
-    directory_to_process = "../code"
-    output_file = "ternaryOperator.txt"
+    directory_to_process = "new_loc/after"
+    output_file = "ternaryOperator_loc.txt"
 
     results = process_c_files(directory_to_process)
     write_results_to_file(results, output_file)
